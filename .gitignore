@@ -1,4 +1,19 @@
-*
-!.gitignore
-!*.d
-!*.src
+/.backup_union
+/Data
+/DirectX
+/Miles
+/saves
+/System
+/g2mdk-uninst.exe
+/installscript.vdf
+/Union - Uninstall.exe
+/VDFS.CFG
+/_work/tools
+/_work/demo
+/_work/Data/Anims
+/_work/Data/Meshes
+/_work/Data/Presets
+/_work/Data/Textures
+/_work/Data/Video
+/_work/Data/Worlds
+/_work/Data/Music

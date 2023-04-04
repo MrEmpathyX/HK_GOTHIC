@@ -82,7 +82,6 @@ func void ZS_Attack ()
 
 func int ZS_Attack_Loop ()
 {
-	B_Greg_ComesToDexter ();//Joly://ADDON
 			
 	// ----- NICHT unten, sonst bei LOAD Game other trotz B_ValidateOther verloren! Warum??? -----
 	Npc_GetTarget (self); // other = target
@@ -371,16 +370,6 @@ func void ZS_Attack_End ()
 		{
 			AI_StartState (self, ZS_RansackBody, 0, "");
 			return;
-		}
-		else //(other.guild > GIL_SEPERATOR_HUM)
-		{
-			// ------ AlliJack nimmt Fleisch ------
-			if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(AlligatorJack))
-			&& (Npc_HasItems(other, ItFoMuttonRaw) > 0)
-			{	
-				AI_StartState (self, ZS_GetMeat, 0, "");
-				return;
-			};
 		};
 	};
 

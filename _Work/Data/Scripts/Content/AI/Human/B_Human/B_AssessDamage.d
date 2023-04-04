@@ -7,15 +7,7 @@
 
 func void B_AssessDamage ()
 {
-	var C_NPC Quarho; Quarho = Hlp_GetNpc (NONE_ADDON_111_Quarhodron);
-	var C_NPC Rhadem; Rhadem = Hlp_GetNpc (NONE_ADDON_112_Rhademes);
-
-	if	((Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Quarho)))
-	||	((Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Rhadem)))
-	{
-		B_GhostSpecialDamage (other, self);
-		return;
-	};
+	
 
 	B_BeliarsWeaponSpecialDamage (other, self);
 
@@ -28,12 +20,7 @@ func void B_AssessDamage ()
 	
 	if self.aivar [AIV_EnemyOverride] == TRUE
 	{
-		var C_NPC RAV; RAV = Hlp_GetNpc(BDT_1090_Addon_Raven);
-		
-		if (Hlp_GetInstanceID(self) == (Hlp_GetInstanceID(RAV)))
-		{
-			self.aivar [AIV_EnemyOverride] =	FALSE;
-		};
+
 	};
 	// ------ Wenn NSC im ZS_Attack ------
 	if (Npc_IsInState(self,ZS_Attack))

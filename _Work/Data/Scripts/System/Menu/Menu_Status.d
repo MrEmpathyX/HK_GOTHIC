@@ -67,8 +67,8 @@ instance MENU_STATUS(C_MENU_DEF)
 
 
 const int STAT_A_X1 = 500;
-const int STAT_A_X2 = 2300;
-const int STAT_A_X3 = 3200;
+const int STAT_A_X2 = 2400;
+const int STAT_A_X3 = 3050;
 const int STAT_A_X4 = 3400;
 const int STAT_B_X1 = 3800;
 const int STAT_B_X2 = 6000;
@@ -107,7 +107,7 @@ instance MENU_ITEM_LEVEL_TITLE(C_MENU_ITEM_DEF)
 {
 	posx = STAT_A_X2;
 	posy = STAT_PLY_Y + (STAT_DY * 0);
-	text[0] = "Poziom";
+	text[0] = "Poz.";
 	fontname = STAT_FONT_DEFAULT;
 	flags = flags & ~IT_SELECTABLE;
 };
@@ -572,3 +572,4 @@ instance MENU_ITEM_TALENT_16_SKILL(C_MENU_ITEM_DEF)
 	fontname = STAT_FONT_DEFAULT;
 	flags = flags & ~IT_SELECTABLE;
 };
+

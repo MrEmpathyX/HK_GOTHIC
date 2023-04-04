@@ -8,11 +8,6 @@
 
 func int C_DropUnconscious()
 {
-	//if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Raven))
-	//|| (Hlp_GetInstanceID(other) == Hlp_GetInstanceID(Raven))
-	//{
-	//	return TRUE;
-	//};
 	
 	// ------ Folgende NSCs töten immer ------
 	if (other.guild > GIL_SEPERATOR_HUM)

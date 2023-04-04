@@ -23,7 +23,7 @@ instance MIL_005_BARABACK (Npc_Default)
 	B_CreateAmbientInv 	(self);
 		
 	// ------ visuals ------																			//Muss NACH Attributen kommen, weil in B_SetNpcVisual die Breite abh. v. STR skaliert wird
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald", Face_N_Baraback_01, BodyTex_N, Pancerz_Magnata);		
+	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald", Face_N_Baraback_01, BodyTex_N, C_Pancerz_Straznika);		
 	Mdl_SetModelFatness	(self, 0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Relaxed.mds"); // Tired / Militia / Mage / Arrogance / Relaxed
 	

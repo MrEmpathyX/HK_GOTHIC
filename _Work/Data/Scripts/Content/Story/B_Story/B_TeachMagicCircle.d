@@ -88,30 +88,3 @@ func int B_TeachMagicCircle (var C_NPC slf, var C_NPC oth, var int circle)
 };
 
 
-
-
-
-
-	
-	
-	
-	
-	
-	
-	
-
-		
-	
-	
-	
-
-	
-	
-	
-	
-	
-
-	
-	
-	
-

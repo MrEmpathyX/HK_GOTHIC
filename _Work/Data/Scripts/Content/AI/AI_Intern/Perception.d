@@ -111,8 +111,11 @@ func void Perception_Set_Normal ()				//Für Humans
 {
 	// --- Die Senses bei jedem Zustand neu setzen (Weil in ZS_Guide_Player die Senses & Ranges verändert werden) ------
 	self.senses			=	SENSE_HEAR | SENSE_SEE;
-	self.senses_range	=	PERC_DIST_ACTIVE_MAX;
+	
+	//self.senses_range	=	100;
 
+	self.senses_range	=	PERC_DIST_ACTIVE_MAX;
+	
 	// --- Takt der aktiven Wahrnehmungen ------------------------------------------------
 	if (Npc_KnowsInfo(self, 1))
 	|| (C_NpcIsGateGuard (self))
@@ -153,6 +156,10 @@ func void Perception_Set_Minimal ()				//Für Männer und Frauen
 {
 	// --- Die Senses bei jedem Zustand neu setzen (nur falls in ZS mit Perc_Set_Minimal noch ZUSÄTLZLICH (lokal) aktive Wahrnehmungen angemeldet werden) ------
 	self.senses			=	SENSE_HEAR | SENSE_SEE;
+	
+	//self.senses_range	=	100;
+
+	
 	self.senses_range	=	PERC_DIST_ACTIVE_MAX;
 
 	// --- passiv ------------------------------------------------------------------------

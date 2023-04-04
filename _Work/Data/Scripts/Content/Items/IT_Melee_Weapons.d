@@ -1358,7 +1358,7 @@ INSTANCE ItMw_Schwert1 (C_Item)
 /********************************************************************************/
 INSTANCE ItMw_Schwert2 (C_Item)
 {	
-	name 				=	"Miecz Arto";  
+	name 				=	"D³ugi miecz";  
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_SWD;	
@@ -1999,7 +1999,7 @@ INSTANCE ItMw_Folteraxt (C_Item)
 /********************************************************************************/
 INSTANCE ItMw_Orkschlaechter (C_Item)
 {	
-	name 				=	"Miecz Blizny";  
+	name 				=	"Orkowa Zguba";  
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_SWD;	
@@ -2124,7 +2124,7 @@ INSTANCE ItMw_Barbarenstreitaxt (C_Item)
 /********************************************************************************/
 INSTANCE ItMw_Sturmbringer (C_Item)		//Joly: trägt None_101_Mario_DI, aber erst auf der Dracheninsel
 {	
-	name 				=	"Gniew Innosa";  
+	name 				=	"Ostrze Burzy";  
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_2HD_SWD;	
@@ -2266,7 +2266,7 @@ INSTANCE ItMw_Drachenschneide (C_Item)
 // *******************
 INSTANCE ItMw_1H_Special_04 (C_Item) 
 {	
-	name 				=	"Gniew Innosa";
+	name 				=	NAME_ItMw_1H_Special_04;
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_SWD;	

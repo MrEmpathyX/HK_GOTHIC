@@ -73,23 +73,3 @@ INSTANCE SkeletonMage		(Mst_Default_Skeleton_Mage)
 {
  	B_SetVisuals_Skeleton_Mage();
 };
-
-//*********************
-//	SkeletonMage_Angar 	
-//*********************
-
-INSTANCE SkeletonMage_Angar		(Mst_Default_Skeleton_Mage)
-{
- 	B_SetVisuals_Skeleton_Mage();
-	CreateInvItems (self, ItAm_Mana_Angar_MIS, 1);	
-	CreateInvItems (self, ItPo_Perm_Mana, 1);	
-};
-
-//************************
-//	SecretLibrarySkeleton
-//***********************
-
-INSTANCE SecretLibrarySkeleton		(Mst_Default_Skeleton_Mage)
-{
- 	B_SetVisuals_Skeleton_Mage();
-};

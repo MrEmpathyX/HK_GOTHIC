@@ -1,62 +1,48 @@
-// ************************************************************
-// 						ToughGuy - NEWS
-// ************************************************************
 
-INSTANCE DIA_ToughGuy_NEWS (C_INFO)
+instance DIA_ToughGuy_NEWS(C_Info)
 {
-	//npc		= alle;	//wird in ZS_Talk zugeordnet
-	nr			= 1;
-	condition	= DIA_ToughGuy_NEWS_Condition;
-	information	= DIA_ToughGuy_NEWS_Info;
-	permanent	= TRUE;
-	important 	= TRUE;
-};                       
+	nr = 1;
+	condition = DIA_ToughGuy_NEWS_Condition;
+	information = DIA_ToughGuy_NEWS_Info;
+	permanent = TRUE;
+	important = TRUE;
+};
 
-FUNC INT DIA_ToughGuy_NEWS_Condition()
+
+func int DIA_ToughGuy_NEWS_Condition()
 {
-	if (Npc_IsInState(self, ZS_Talk))
-	&& (self.aivar[AIV_LastFightAgainstPlayer] != FIGHT_NONE)
-	&& (self.aivar[AIV_LastFightComment] == FALSE)
+	if(Npc_IsInState(self,ZS_Talk) && (self.aivar[AIV_LastFightAgainstPlayer] != FIGHT_NONE) && (self.aivar[AIV_LastFightComment] == FALSE))
 	{
 		return TRUE;
 	};
 };
 
-FUNC VOID DIA_ToughGuy_NEWS_Info()
-{	
-	if (self.aivar[AIV_LastFightAgainstPlayer] == FIGHT_LOST)
+func void DIA_ToughGuy_NEWS_Info()
+{
+	if(self.aivar[AIV_LastFightAgainstPlayer] == FIGHT_LOST)
 	{
-		B_Say (self,other,"$TOUGHGUY_ATTACKLOST"); //No ju¿ dobrze, wygra³eœ. Czego ode mnie chcesz?
+		B_Say(self,other,"$TOUGHGUY_ATTACKLOST");
 	}
-	else if (self.aivar[AIV_LastFightAgainstPlayer] == FIGHT_WON)
+	else if(self.aivar[AIV_LastFightAgainstPlayer] == FIGHT_WON)
 	{
-		B_Say (self,other,"$TOUGHGUY_ATTACKWON"); //Mam ci jeszcze raz pokazaæ, kto tu rz¹dzi?
+		B_Say(self,other,"$TOUGHGUY_ATTACKWON");
 	}
-	else //FIGHT_CANCEL
+	else
 	{
-		B_Say (self,other,"$TOUGHGUY_PLAYERATTACK"); //Chcesz siê jeszcze raz ze mn¹ spróbowaæ?
+		B_Say(self,other,"$TOUGHGUY_PLAYERATTACK");
 	};
-	
-	// ------ AIVAR resetten ------
 	self.aivar[AIV_LastFightComment] = TRUE;
-
 	
-	//---------Skinner Addon Hack-----------------
-	if Hlp_GetInstanceID (self) == Hlp_GetInstanceID (Skinner)
+	/*
+	if(Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Skinner))
 	{
-		AI_Output (self, other, "DIA_Addon_Skinner_ToughguyNews_08_00"); //... Nie chcê z tob¹ rozmawiaæ ...
-
-		AI_StopProcessInfos (self);
-		B_Attack (self, other, AR_NONE, 1); 
-	};
+		AI_Output(self,other,"DIA_Addon_Skinner_ToughguyNews_08_00");	//
+		AI_StopProcessInfos(self);
+		B_Attack(self,other,AR_NONE,1);
+	};*/
 };
 
-
-
-// *************************************************************************
-// -------------------------------------------------------------------------
-
-func void B_AssignToughGuyNEWS (var C_NPC slf)
+func void B_AssignToughGuyNEWS(var C_Npc slf)
 {
 	DIA_ToughGuy_NEWS.npc = Hlp_GetInstanceID(slf);
 };

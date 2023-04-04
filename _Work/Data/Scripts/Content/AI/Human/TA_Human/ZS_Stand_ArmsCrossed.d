@@ -70,13 +70,6 @@ func int ZS_Stand_ArmsCrossed_loop()
 		
 		//ADDON>
 		var int Eventrandy;	Eventrandy = Hlp_Random(200);
-		if (Eventrandy == 1) 
-		&& (CurrentLevel == ADDONWORLD_ZEN)
-		&& (RavenIsDead == FALSE) 
-		&& (self.guild != GIL_PIR)
-			{
-				B_EVENT_PORTAL_EARTHQUAKE ();			
-			};
 		//ADDON<
 
 		// ------ nicht benutzte Random-Anis ------

@@ -61,4 +61,5 @@ func void TA_Concert			(var int start_h, var int start_m, var int stop_h, var in
 func void TA_Sleep_Deep			(var int start_h, var int start_m, var int stop_h, var int stop_m, VAR string waypoint)	{TA_Min		(self,	start_h,start_m, stop_h, stop_m, ZS_Sleep_Deep,				waypoint);};
 func void TA_RangerMeeting		(var int start_h, var int start_m, var int stop_h, var int stop_m, VAR string waypoint)	{TA_Min		(self,	start_h,start_m, stop_h, stop_m, ZS_Stand_RangerMeeting,	waypoint);};
 func void TA_Ghost				(var int start_h, var int start_m, var int stop_h, var int stop_m, VAR string waypoint)	{TA_Min		(self,	start_h,start_m, stop_h, stop_m, ZS_Ghost,					waypoint);};
-func void TA_GhostWusel			(var int start_h, var int start_m, var int stop_h, var int stop_m, VAR string waypoint)	{TA_Min		(self,	start_h,start_m, stop_h, stop_m, ZS_GhostWusel,				waypoint);};
+
+

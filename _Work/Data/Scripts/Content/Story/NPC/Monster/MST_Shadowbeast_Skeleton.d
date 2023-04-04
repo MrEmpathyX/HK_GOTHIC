@@ -72,13 +72,3 @@ INSTANCE Shadowbeast_Skeleton	(Mst_Default_Shadowbeast_Skeleton)
 	B_SetVisuals_Shadowbeast_Skeleton();
 	Npc_SetToFistMode(self);
 };
-
-//*****************************
-//	Shadowbeast_Skeleton_Angar    	
-//*****************************
-
-INSTANCE Shadowbeast_Skeleton_Angar	(Mst_Default_Shadowbeast_Skeleton)
-{
-	B_SetVisuals_Shadowbeast_Skeleton();
-	Npc_SetToFistMode(self);
-};

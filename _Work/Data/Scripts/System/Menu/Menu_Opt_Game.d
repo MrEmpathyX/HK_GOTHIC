@@ -2,25 +2,45 @@
 instance MENU_OPT_GAME(C_MENU_DEF)
 {
 	backpic = MENU_BACK_PIC;
+	
+	//USTAWIENIA GRY
 	items[0] = "MENUITEM_GAME_HEADLINE";
+	
+	//Podpisy
 	items[1] = "MENUITEM_GAME_SUB_TITLES";
 	items[2] = "MENUITEM_GAME_SUB_TITLES_CHOICE";
+	
+	//Oznaczanie celów
 	items[3] = "MENUITEM_GAME_FIGHTFOCUS";
 	items[4] = "MENUITEM_GAME_FIGHTFOCUS_CHOICE";
+	
+	//Podœwietlanie obiektów
 	items[5] = "MENUITEM_GAME_INTERACTFOCUS";
 	items[6] = "MENUITEM_GAME_INTERACTFOCUS_CHOICE";
+	
+	//Zmiana pracy kamery
 	items[7] = "MENUITEM_GAME_LOOKAROUND_INVERSE";
 	items[8] = "MENUITEM_GAME_LOOKAROUND_INVERSE_CHOICE";
+	
+	//Myszka w grze
 	items[9] = "MENUITEM_M";
 	items[10] = "MENUITEM_M_CHOICE";
+	
+	//Czu³oœæ myszy
 	items[11] = "MENUITEM_MSENSITIVITY";
 	items[12] = "MENUITEM_MSENSITIVITY_SLIDER";
+	
+	//Sterowanie z Gothic I
 	items[13] = "MENUITEM_GAME_OLDCONTROLS";
 	items[14] = "MENUITEM_GAME_OLDCONTROLS_CHOICE";
+	
+	//Wróæ
 	items[15] = "MENUITEM_GAME_BACK";
+	
 	flags = flags | MENU_SHOW_INFO;
 };
 
+//USTAWIENIA GRY
 instance MENUITEM_GAME_HEADLINE(C_MENU_ITEM_DEF)
 {
 	text[0] = "USTAWIENIA GRY";
@@ -32,6 +52,7 @@ instance MENUITEM_GAME_HEADLINE(C_MENU_ITEM_DEF)
 	flags = flags | IT_TXT_CENTER;
 };
 
+//Podpisy
 instance MENUITEM_GAME_SUB_TITLES(C_MENU_ITEM_DEF)
 {
 	backpic = MENU_ITEM_BACK_PIC;
@@ -61,11 +82,12 @@ instance MENUITEM_GAME_SUB_TITLES_CHOICE(C_MENU_ITEM_DEF)
 	flags = flags | IT_TXT_CENTER;
 };
 
+//Oznaczanie celów
 instance MENUITEM_GAME_FIGHTFOCUS(C_MENU_ITEM_DEF)
 {
 	backpic = MENU_ITEM_BACK_PIC;
 	text[0] = "Oznaczanie celów";
-	text[1] = "W³./wy³. wyró¿niania bierz¹cego celu w czasie walki";
+	text[1] = "W³./wy³. wyró¿niania bie¿¹cego celu w czasie walki";
 	posx = 700;
 	posy = MENU_START_Y + (MENU_SOUND_DY * 1);
 	dimx = 4600;
@@ -90,6 +112,7 @@ instance MENUITEM_GAME_FIGHTFOCUS_CHOICE(C_MENU_ITEM_DEF)
 	flags = flags | IT_TXT_CENTER;
 };
 
+//Podœwietlanie obiektów
 instance MENUITEM_GAME_INTERACTFOCUS(C_MENU_ITEM_DEF)
 {
 	backpic = MENU_ITEM_BACK_PIC;
@@ -119,6 +142,7 @@ instance MENUITEM_GAME_INTERACTFOCUS_CHOICE(C_MENU_ITEM_DEF)
 	flags = flags | IT_TXT_CENTER;
 };
 
+//Zmiana pracy kamery
 instance MENUITEM_GAME_LOOKAROUND_INVERSE(C_MENU_ITEM_DEF)
 {
 	backpic = MENU_ITEM_BACK_PIC;
@@ -148,6 +172,7 @@ instance MENUITEM_GAME_LOOKAROUND_INVERSE_CHOICE(C_MENU_ITEM_DEF)
 	flags = flags | IT_TXT_CENTER;
 };
 
+//Myszka w grze
 instance MENUITEM_M(C_MENU_ITEM_DEF)
 {
 	backpic = MENU_ITEM_BACK_PIC;
@@ -177,6 +202,7 @@ instance MENUITEM_M_CHOICE(C_MENU_ITEM_DEF)
 	flags = flags | IT_TXT_CENTER;
 };
 
+//Czu³oœæ myszy
 instance MENUITEM_MSENSITIVITY(C_MENU_ITEM_DEF)
 {
 	backpic = MENU_ITEM_BACK_PIC;
@@ -208,6 +234,7 @@ instance MENUITEM_MSENSITIVITY_SLIDER(C_MENU_ITEM_DEF)
 	flags = flags | IT_TXT_CENTER;
 };
 
+//Sterowanie z Gothic I
 instance MENUITEM_GAME_OLDCONTROLS(C_MENU_ITEM_DEF)
 {
 	backpic = MENU_ITEM_BACK_PIC;
@@ -237,15 +264,15 @@ instance MENUITEM_GAME_OLDCONTROLS_CHOICE(C_MENU_ITEM_DEF)
 	flags = flags | IT_TXT_CENTER;
 };
 
+//Wróæ
 instance MENUITEM_GAME_BACK(C_MENU_ITEM_DEF)
 {
 	backpic = MENU_ITEM_BACK_PIC;
 	text[0] = "Wróæ";
 	posx = 1000;
-	posy = MENU_BACK_Y;
+	posy = MENU_BACK_Y + 300;
 	dimx = 6192;
-	dimy = MENU_SOUND_DY;
+	dimy = MENU_OPT_DY;
 	onselaction[0] = SEL_ACTION_BACK;
 	flags = flags | IT_TXT_CENTER;
 };
-

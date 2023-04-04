@@ -9,12 +9,7 @@ func int C_WantToRansack (var C_NPC slf)
 	{
 		return FALSE;
 	};
-	
-	// Raven
-	if (Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(Raven))
-	{
-		return FALSE;
-	};
+
 	
 	// ------ ausgenommene Gilden ------
 	if (slf.guild == GIL_DMT)

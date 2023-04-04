@@ -32,7 +32,7 @@ func void ZS_RansackBody_End ()
 	AI_PlayAni (self, "T_PLUNDER");
 	
 	// ------ Besitz-Items nehmen ------
-	if (Npc_HasItems(other, Holy_Hammer_MIS) > 0)
+	/*if (Npc_HasItems(other, Holy_Hammer_MIS) > 0)
 	&& (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Garwig))
 	{
 		CreateInvItems		(self, Holy_Hammer_MIS, 1);
@@ -53,7 +53,7 @@ func void ZS_RansackBody_End ()
 		CreateInvItems		(self, ITKE_Greg_ADDON_MIS, 1);
 		Npc_RemoveInvItems	(other,ITKE_Greg_ADDON_MIS, 1);
 	};	
-	
+	*/
 	// ------ Gold nehmen ------
 	if (Npc_HasItems (other, ItMi_Gold) > 0)
 	{
@@ -97,8 +97,7 @@ func void ZS_RansackBody_End ()
 
 
 // **************************************	
-// ------ Allijack plündert Ratten ------
-// **************************************
+// ------ Allijack plï¿½ndert Ratten ------// **************************************
 
 func void ZS_GetMeat ()
 {	

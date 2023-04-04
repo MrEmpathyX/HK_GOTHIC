@@ -169,6 +169,7 @@ func int showintro()
 func int showcredits()
 {
 	PlayVideo("credits.bik");
+	PlayVideo("credits2.bik");
 	return 1;
 };
 

@@ -1,506 +1,352 @@
-//---------------------------------------------------------------------
-//	Item Werte
-//---------------------------------------------------------------------
-const int 	Value_Goldnugget 			=  18;
-const int	Value_WhitePearl			= 120;	
-const int	Value_Addon_Joint_01		=  60;	
-//---------------------------------------------------------------------
-//	Goldbrocken
-//---------------------------------------------------------------------
-INSTANCE ItMi_GoldNugget_Addon(C_Item)
+
+const int VALUE_GOLDNUGGET = 18;
+const int VALUE_WHITEPEARL = 120;
+const int VALUE_ADDON_JOINT_01 = 60;
+
+instance ITMI_GOLDNUGGET_ADDON(C_ITEM)
 {
-	name 		=	"Bry³ka z³ota";
-
-	mainflag 	=	ITEM_KAT_NONE;
-	flags 		=	ITEM_MULTI;
-
-	value 		=	Value_Goldnugget;
-
-	visual 		=	"ItMi_GoldNugget_01.3ds";
-	material 	=	MAT_STONE;
-
-	description	= 	name;
-	
-	TEXT[5]		= 	NAME_Value;	
-	COUNT[5]	=	value;
-	
-	INV_ZBIAS	= INVCAM_ENTF_MISC2_STANDARD;
-	
+	name = "BryÅ‚ka zÅ‚ota";
+	mainflag = ITEM_KAT_NONE;
+	flags = ITEM_MULTI;
+	value = VALUE_GOLDNUGGET;
+	visual = "ItMi_GoldNugget_01.3ds";
+	material = MAT_STONE;
+	description = name;
+	text[5] = NAME_VALUE;
+	count[5] = value;
+	inv_zbias = INVCAM_ENTF_MISC2_STANDARD;
 };
-//---------------------------------------------------------------------
-//	Weiße Perle
-//---------------------------------------------------------------------
-INSTANCE ItMi_Addon_WhitePearl (C_Item)
+
+instance ITMI_ADDON_WHITEPEARL(C_ITEM)
 {
-	name 				=	"Per³a";
-
-	mainflag 			=	ITEM_KAT_NONE;
-	flags 				=	ITEM_MULTI;
-
-	value 				=	Value_WhitePearl;
-
-	visual 				=	"ItMi_WhitePearl_01.3ds";
-	material 			=	MAT_STONE;
-
-	description			= 	name;
-	TEXT[5]				= 	NAME_Value;	
-	COUNT[5]			= 	value;
-	
-	INV_ZBIAS			= INVCAM_ENTF_MISC_STANDARD;
+	name = "PerÅ‚a";
+	mainflag = ITEM_KAT_NONE;
+	flags = ITEM_MULTI;
+	value = VALUE_WHITEPEARL;
+	visual = "ItMi_WhitePearl_01.3ds";
+	material = MAT_STONE;
+	description = name;
+	text[5] = NAME_VALUE;
+	count[5] = value;
+	inv_zbias = INVCAM_ENTF_MISC_STANDARD;
 };
-//---------------------------------------------------------------------
-//	Grüner Novize
-//---------------------------------------------------------------------
-INSTANCE ItMi_Addon_Joint_01(C_Item)
+
+instance ITMI_ADDON_JOINT_01(C_ITEM)
 {
-	name 				=	"Zielony nowicjusz";
-
-	mainflag 			=	ITEM_KAT_NONE;
-	flags 				=	ITEM_MULTI;
-
-	value 				=	Value_Addon_Joint_01;
-
-	visual 				=	"ItMi_Joint_US.3ds";
-	material 			=	MAT_LEATHER;
-
-	scemeName			=	"JOINT";
-	on_state[0]			= 	Use_Addon_Joint_01;
-	description			= 	name;
-	
-	TEXT[5]				= 	NAME_Value;	
-	COUNT[5]			= 	value;
-	
-	INV_ZBIAS				= INVCAM_ENTF_RING_STANDARD;
-	
+	name = "Zielony nowicjusz";
+	mainflag = ITEM_KAT_NONE;
+	flags = ITEM_MULTI;
+	value = VALUE_ADDON_JOINT_01;
+	visual = "ItMi_Joint_US.3ds";
+	material = MAT_LEATHER;
+	scemename = "JOINT";
+	on_state[0] = use_addon_joint_01;
+	description = name;
+	text[5] = NAME_VALUE;
+	count[5] = value;
+	inv_zbias = INVCAM_ENTF_RING_STANDARD;
 };
-var int FirstJoint;
-func void Use_Addon_Joint_01()
+
+
+var int firstjoint;
+
+func void use_addon_joint_01()
 {
-	if (Npc_IsPlayer (self))
+	if(Npc_IsPlayer(self))
 	{
-		if (FirstJoint == FALSE)
+		if(FIRSTJOINT == FALSE)
 		{
-			FirstJoint = TRUE;
-			B_GivePlayerXP (5); 
+			FIRSTJOINT = TRUE;
+			b_giveplayerxp(5);
 		};
-		Wld_PlayEffect ("SLOW_TIME", self, self, 0, 0, 0, FALSE);
+		Wld_PlayEffect("SLOW_TIME",self,self,0,0,0,FALSE);
 	};
 };
 
-//****************************************************************************
-//				Baltrams Lieferung von Akil
-//			---------------------------------------------
-//****************************************************************************
-INSTANCE ItMi_BaltramPaket(C_Item)
+
+instance ITMI_BALTRAMPAKET(C_ITEM)
 {
-	name 				=	"Dostawa Beltrama";
-
-	mainflag 			=	ITEM_KAT_NONE;
-	flags 				=	ITEM_MISSION;
-
-	value 				=	200;
-
-	visual 				=	"ItMi_Packet.3ds";
-	
-	material 			=	 MAT_LEATHER;
-	
-	description			= 	name;
-	TEXT[2]				= 	"Ciê¿ka paczka";
-	TEXT[3]				=	"pe³na dobrych rzeczy";
-	TEXT[4]				=	"od farmera Akila.";
-	
+	name = "Dostawa Beltrama";
+	mainflag = ITEM_KAT_NONE;
+	flags = ITEM_MISSION;
+	value = 200;
+	visual = "ItMi_Packet.3ds";
+	material = MAT_LEATHER;
+	description = name;
+	text[2] = "CiÄ™Å¼ka paczka";
+	text[3] = "peÅ‚na dobrych rzeczy";
+	text[4] = "od farmera Akila.";
 };
 
-//****************************************************************************
-//				Baltrams Lieferung für Skip
-//			---------------------------------------------
-//****************************************************************************
-INSTANCE ItMi_Packet_Baltram4Skip_Addon (C_Item)
+instance ITMI_PACKET_BALTRAM4SKIP_ADDON(C_ITEM)
 {
-	name 				=	"Paczka dla Skipa";
-
-	mainflag 			=	ITEM_KAT_NONE;
-	flags 				=	ITEM_MISSION;
-
-	value 				=	200;
-
-	visual 				=	"ItMi_Packet.3ds";
-	
-	material 			=	 MAT_LEATHER;
-	
-	description			= 	name;
-	TEXT[2]				= 	"Ta ciê¿ka paczka";
-	TEXT[3]				=	"pe³na dobrych rzeczy";
-	TEXT[4]				=	"ma trafiæ do pirata Skipa.";
-	
-};
-/******************************************************************************************/
-INSTANCE ItMi_BromorsGeld_Addon (C_Item)
-{
-	name 				=	"Z³ota misa Bromora";
-
-	mainflag 			=	ITEM_KAT_NONE;
-	flags 				=	ITEM_MULTI|ITEM_MISSION;
-
-	value 				=	Value_Nugget;
-
-	visual 				=	"ItMi_GoldChalice.3DS";
-	material 			=	MAT_METAL;
-
-	description			= 	name;
-	TEXT[2]				= 	"Na dnie misy";
-	TEXT[3]				=	"ostrym narzêdziem ";
-	TEXT[4]				=	"wydrapano imiê 'Bromor'.";
-	TEXT[5]				= 	NAME_Value;	
-	COUNT[5]			= 	value;
+	name = "Paczka dla Skipa";
+	mainflag = ITEM_KAT_NONE;
+	flags = ITEM_MISSION;
+	value = 200;
+	visual = "ItMi_Packet.3ds";
+	material = MAT_LEATHER;
+	description = name;
+	text[2] = "Ta ciÄ™Å¼ka paczka";
+	text[3] = "peÅ‚na dobrych rzeczy";
+	text[4] = "ma trafiÄ‡ do pirata Skipa.";
 };
 
-INSTANCE ItSe_ADDON_CavalornsBeutel	(C_Item)
+instance ITMI_BROMORSGELD_ADDON(C_ITEM)
 {
-	name 				=	"Skórzana torba Cavalorna";
-
-	mainflag 			=	ITEM_KAT_NONE;
-	flags 				=	ITEM_MULTI|ITEM_MISSION;
-
-	value 				=	Value_Nugget;
-
-	visual 				=	"ItMi_Pocket.3ds";
-	scemename			=	"MAPSEALED";	
-	material 			=	MAT_LEATHER;
-	on_state[0]			=   Use_CavalornsBeutel;
-	
-	description			= 	name;
-	
-	TEXT[0]				= 	"";
-	TEXT[1]				= 	"Przywi¹zana jest do niej wywieszka";
-	TEXT[2]				= 	"z imieniem 'Cavalorn',";
-	TEXT[3]				= 	"a w œrodku jest bry³a rudy.";
-	TEXT[4]				= 	"";
-	TEXT[5]				= 	NAME_Value;	COUNT[5]	= value;
+	name = "ZÅ‚ota misa Bromora";
+	mainflag = ITEM_KAT_NONE;
+	flags = ITEM_MULTI | ITEM_MISSION;
+	value = VALUE_NUGGET;
+	visual = "ItMi_GoldChalice.3DS";
+	material = MAT_METAL;
+	description = name;
+	text[2] = "Na dnie misy";
+	text[3] = "ostrym narzÄ™dziem ";
+	text[4] = "wydrapano imiÄ™ 'Bromor'.";
+	text[5] = NAME_VALUE;
+	count[5] = value;
 };
 
-FUNC VOID Use_CavalornsBeutel ()
+instance ITSE_ADDON_CAVALORNSBEUTEL(C_ITEM)
 {
-		CreateInvItems (hero, ItMi_Nugget ,1);
-		Print (PRINT_FoundOreNugget);
-		SC_OpenedCavalornsBeutel = TRUE;
-		Log_CreateTopic (TOPIC_Addon_CavalornTheHut, LOG_MISSION);
-		Log_SetTopicStatus(TOPIC_Addon_CavalornTheHut, LOG_RUNNING);
-		B_LogEntry (TOPIC_Addon_CavalornTheHut,"W chacie Cavalorna w Górniczej Dolinie znalaz³em torbê z bry³k¹ rudy. Ten stary drañ na pewno o niej zapomnia³.");
-};
-
-//**************************************
-//		Diverser Kleinkram
-//**************************************
-instance ItMi_Skull(C_Item)
-{
-	name 				=	"Czaszka";
-
-	mainflag 			=	ITEM_KAT_NONE;
-	flags 				=	ITEM_MISSION;
-
-	value 				=	10;
-
-	visual 				=	"DT_SKELETON_V01_HEAD.3ds";
-	
-	material 			=	 MAT_LEATHER;
-	
-	description			= 	name;
+	name = "SkÃ³rzana torba Cavalorna";
+	mainflag = ITEM_KAT_NONE;
+	flags = ITEM_MULTI | ITEM_MISSION;
+	value = VALUE_NUGGET;
+	visual = "ItMi_Pocket.3ds";
+	scemename = "MAPSEALED";
+	material = MAT_LEATHER;
+	on_state[0] = use_cavalornsbeutel;
+	description = name;
+	text[0] = "";
+	text[1] = "PrzywiÄ…zana jest do niej wywieszka";
+	text[2] = "z imieniem 'Cavalorn',";
+	text[3] = "a w Å›rodku jest bryÅ‚a rudy.";
+	text[4] = "";
+	text[5] = NAME_VALUE;
+	count[5] = value;
 };
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//-----------------------------------------------------------------------------
-//-----------------------------------------------------------------------------
-//-----------------------------------------------------------------------------
-//-----------------------------------------------------------------------------
-// 				INEXTREMO ITEMS
-//-----------------------------------------------------------------------------
-//-----------------------------------------------------------------------------
-//-----------------------------------------------------------------------------
-//-----------------------------------------------------------------------------
-//-----------------------------------------------------------------------------
-
-
-INSTANCE ItMi_IECello(C_Item)
+func void use_cavalornsbeutel()
 {
-	name 				=	"Wiolonczela";
-
-	mainflag 			=	ITEM_KAT_NONE;
-	flags 				=	ITEM_MULTI;
-
-	value 				=	1;
-
-	visual 				=	"Itmi_IE_Cello.3ds";
-	
-	material 			=	MAT_WOOD;
-	
-	scemeName			=	"CELLO";
-	on_state[0]			= 	Use_Cello;
-		
-	description			= 	name;
-};
-
-func void Use_Cello()
-{
-	
-};
-
-INSTANCE ItMi_IECelloBow(C_Item)
-{
-	name 				=	"Smyczek wiolonczeli";
-
-	mainflag 			=	ITEM_KAT_NONE;
-	flags 				=	ITEM_MULTI;
-
-	value 				=	1;
-
-	visual 				=	"Itmi_IE_CelloBow.3ds";
-	
-	material 			=	MAT_WOOD;
-	
-	description			= 	name;
-};
-
-INSTANCE ItMi_IEDrum(C_Item)
-{
-	name 				=	"Bêben";
-
-	mainflag 			=	ITEM_KAT_NONE;
-	flags 				=	ITEM_MULTI;
-
-	value 				=	1;
-
-	visual 				=	"Itmi_IE_Drum.3ds";
-	
-	material 			=	MAT_WOOD;
-	
-	scemeName			=	"PAUKE";
-	on_state[0]			= 	Use_Drum;
-	
-	description			= 	name;
-};
-
-func void Use_Drum()
-{
-	
-};
-
-INSTANCE ItMi_IEDrumScheit(C_Item)
-{
-	name 				=	"Tr¹ba";
-
-	mainflag 			=	ITEM_KAT_NONE;
-	flags 				=	ITEM_MULTI;
-
-	value 				=	1;
-
-	visual 				=	"Itmi_IE_Drumscheit.3ds";
-	
-	material 			=	MAT_WOOD;
-	
-	scemeName			=	"DRUMSCHEIT";
-	on_state[0]			= 	Use_Drumscheit;
-	
-	description			= 	name;
-};
-
-func void Use_Drumscheit()
-{
-	
-};
-
-INSTANCE ItMi_IEDrumStick(C_Item)
-{
-	name 				=	"Pa³eczka";
-
-	mainflag 			=	ITEM_KAT_NONE;
-	flags 				=	ITEM_MULTI;
-
-	value 				=	1;
-
-	visual 				=	"Itmi_IE_DrumStick.3ds";
-	
-	material 			=	MAT_WOOD;
-	
-	description			= 	name;
-};
-
-INSTANCE ItMi_IEDudelBlau(C_Item)
-{
-	name 				=	"Niebieskie dudy";
-
-	mainflag 			=	ITEM_KAT_NONE;
-	flags 				=	ITEM_MULTI;
-
-	value 				=	1;
-
-	visual 				=	"Itmi_IE_DudelBlau.3ds";
-	
-	material 			=	MAT_WOOD;
-	
-	scemeName			=	"DUDEL";
-	on_state[0]			= 	Use_Dudel;
-	
-	description			= 	name;
-};
-
-func void Use_Dudel()
-{
-	
-};
-
-INSTANCE ItMi_IEDudelGelb(C_Item)
-{
-	name 				=	"¯ó³te dudy";
-
-	mainflag 			=	ITEM_KAT_NONE;
-	flags 				=	ITEM_MULTI;
-
-	value 				=	1;
-
-	visual 				=	"Itmi_IE_DudelGelb.3ds";
-	
-	material 			=	MAT_WOOD;
-	
-	scemeName			=	"DUDEL";
-	on_state[0]			= 	Use_Dudel;
-
-	
-	description			= 	name;
+	CreateInvItems(hero,itmi_nugget,1);
+	Print(PRINT_FOUNDORENUGGET);
 };
 
 
-
-INSTANCE ItMi_IEHarfe(C_Item)
+instance ITMI_SKULL(C_ITEM)
 {
-	name 				=	"Harfa";
-
-	mainflag 			=	ITEM_KAT_NONE;
-	flags 				=	ITEM_MULTI;
-
-	value 				=	1;
-
-	visual 				=	"Itmi_IE_Harfe.3ds";
-	
-	material 			=	MAT_WOOD;
-
-	scemeName			=	"HARFE";
-	on_state[0]			= 	Use_Harfe;
-
-	
-	description			= 	name;
+	name = "Czaszka";
+	mainflag = ITEM_KAT_NONE;
+	flags = ITEM_MISSION;
+	value = 10;
+	visual = "DT_SKELETON_V01_HEAD.3ds";
+	material = MAT_LEATHER;
+	description = name;
 };
 
-func void Use_Harfe()
+instance ITMI_IECELLO(C_ITEM)
 {
-	
+	name = "Wiolonczela";
+	mainflag = ITEM_KAT_NONE;
+	flags = ITEM_MULTI;
+	value = 1;
+	visual = "Itmi_IE_Cello.3ds";
+	material = MAT_WOOD;
+	scemename = "CELLO";
+	on_state[0] = use_cello;
+	description = name;
 };
 
-INSTANCE ItMi_IELaute(C_Item)
-{
-	name 				=	"Lutnia";
 
-	mainflag 			=	ITEM_KAT_NONE;
-	flags 				=	ITEM_MULTI;
-
-	value 				=	1;
-
-	visual 				=	"Itmi_IE_Laute.3ds";
-	
-	material 			=	MAT_WOOD;
-
-	scemeName			=	"IELAUTE";
-	on_state[0]			= 	Use_Laute;
-
-	description			= 	name;
-};
-
-func void Use_Laute()
+func void use_cello()
 {
 };
-//****************************************************************************
-//				Lennar'S Dietrich Paket
-//			---------------------------------------------
-//****************************************************************************
-INSTANCE ItMi_Addon_Lennar_Paket(C_Item)
+
+
+instance ITMI_IECELLOBOW(C_ITEM)
 {
-	name 				=	"Brzêcz¹ca paczka";
-
-	mainflag 			=	ITEM_KAT_NONE;
-	flags 				=	ITEM_MISSION;
-
-	value 				=	300;
-
-	visual 				=	"ItMi_Packet.3ds";
-	scemename			=	"MAPSEALED";	
-	on_state[0]			=   Use_LennarPaket;
-	material 			=	 MAT_LEATHER;
-	
-	description			= 	name;
-	TEXT[2]				= 	"W œrodku s¹ wytrychy,";
-	TEXT[3]				=	"";
-	TEXT[4]				=	"du¿o wytrychów.";
-	
-	TEXT[5]				= 	NAME_Value;		
-	COUNT[5]			= 	value;
+	name = "Smyczek wiolonczeli";
+	mainflag = ITEM_KAT_NONE;
+	flags = ITEM_MULTI;
+	value = 1;
+	visual = "Itmi_IE_CelloBow.3ds";
+	material = MAT_WOOD;
+	description = name;
 };
-FUNC VOID Use_LennarPaket()
+
+instance ITMI_IEDRUM(C_ITEM)
 {
-	B_PlayerFindItem (ItKE_lockpick,Lennar_picklock_amount);
-	Snd_Play ("Geldbeutel");
-	
-	LennarPaket_Open = TRUE;
+	name = "BÄ™ben";
+	mainflag = ITEM_KAT_NONE;
+	flags = ITEM_MULTI;
+	value = 1;
+	visual = "Itmi_IE_Drum.3ds";
+	material = MAT_WOOD;
+	scemename = "PAUKE";
+	on_state[0] = use_drum;
+	description = name;
 };
-	
-instance ItMi_Zeitspalt_Addon(C_Item)
+
+
+func void use_drum()
 {
-	name 				=	"Czarna ruda";
-
-	mainflag 			=	ITEM_KAT_POTIONS;
-	flags 				=	ITEM_MULTI;
-
-	value 				=	0;
-
-	visual 				=	"ItMi_Zeitspalt_Addon.3DS";
-	scemename			=	"MAPSEALED";	
-	on_state[0]			=   Use_Zeitspalt_Addon;
-	material 			=	MAT_STONE;
-
-	wear				= 	WEAR_EFFECT;
-	effect				=	"SPELLFX_WEAKGLIMMER";
-
-	description			= 	name;
-	TEXT[3]				= 	"Dzia³anie nieznane.";				
-
-	INV_ZBIAS				= INVCAM_ENTF_MISC_STANDARD;
 };
-	func void Use_Zeitspalt_Addon()
+
+
+instance ITMI_IEDRUMSCHEIT(C_ITEM)
+{
+	name = "TrÄ…ba";
+	mainflag = ITEM_KAT_NONE;
+	flags = ITEM_MULTI;
+	value = 1;
+	visual = "Itmi_IE_Drumscheit.3ds";
+	material = MAT_WOOD;
+	scemename = "DRUMSCHEIT";
+	on_state[0] = use_drumscheit;
+	description = name;
+};
+
+
+func void use_drumscheit()
+{
+};
+
+
+instance ITMI_IEDRUMSTICK(C_ITEM)
+{
+	name = "PaÅ‚eczka";
+	mainflag = ITEM_KAT_NONE;
+	flags = ITEM_MULTI;
+	value = 1;
+	visual = "Itmi_IE_DrumStick.3ds";
+	material = MAT_WOOD;
+	description = name;
+};
+
+instance ITMI_IEDUDELBLAU(C_ITEM)
+{
+	name = "Niebieskie dudy";
+	mainflag = ITEM_KAT_NONE;
+	flags = ITEM_MULTI;
+	value = 1;
+	visual = "Itmi_IE_DudelBlau.3ds";
+	material = MAT_WOOD;
+	scemename = "DUDEL";
+	on_state[0] = use_dudel;
+	description = name;
+};
+
+
+func void use_dudel()
+{
+};
+
+
+instance ITMI_IEDUDELGELB(C_ITEM)
+{
+	name = "Å»Ã³Å‚te dudy";
+	mainflag = ITEM_KAT_NONE;
+	flags = ITEM_MULTI;
+	value = 1;
+	visual = "Itmi_IE_DudelGelb.3ds";
+	material = MAT_WOOD;
+	scemename = "DUDEL";
+	on_state[0] = use_dudel;
+	description = name;
+};
+
+instance ITMI_IEHARFE(C_ITEM)
+{
+	name = "Harfa";
+	mainflag = ITEM_KAT_NONE;
+	flags = ITEM_MULTI;
+	value = 1;
+	visual = "Itmi_IE_Harfe.3ds";
+	material = MAT_WOOD;
+	scemename = "HARFE";
+	on_state[0] = use_harfe;
+	description = name;
+};
+
+
+func void use_harfe()
+{
+};
+
+
+instance ITMI_IELAUTE(C_ITEM)
+{
+	name = "Lutnia";
+	mainflag = ITEM_KAT_NONE;
+	flags = ITEM_MULTI;
+	value = 1;
+	visual = "Itmi_IE_Laute.3ds";
+	material = MAT_WOOD;
+	scemename = "IELAUTE";
+	on_state[0] = use_laute;
+	description = name;
+};
+
+
+func void use_laute()
+{
+};
+
+
+instance ITMI_ADDON_LENNAR_PAKET(C_ITEM)
+{
+	name = "BrzÄ™czÄ…ca paczka";
+	mainflag = ITEM_KAT_NONE;
+	flags = ITEM_MISSION;
+	value = 300;
+	visual = "ItMi_Packet.3ds";
+	scemename = "MAPSEALED";
+	on_state[0] = use_lennarpaket;
+	material = MAT_LEATHER;
+	description = name;
+	text[2] = "W Å›rodku sÄ… wytrychy,";
+	text[3] = "duÅ¼o wytrychÃ³w.";
+	text[4] = " ";
+	text[5] = NAME_VALUE;
+	count[5] = value;
+};
+
+
+func void use_lennarpaket()
+{
+	b_playerfinditem(itke_lockpick,LENNAR_PICKLOCK_AMOUNT);
+	Snd_Play("Geldbeutel");
+};
+
+
+instance ITMI_ZEITSPALT_ADDON(C_ITEM)
+{
+	name = "Czarna ruda";
+	mainflag = ITEM_KAT_POTIONS;
+	flags = ITEM_MULTI;
+	value = 0;
+	visual = "ItMi_Zeitspalt_Addon.3DS";
+	scemename = "MAPSEALED";
+	on_state[0] = use_zeitspalt_addon;
+	material = MAT_STONE;
+	wear = WEAR_EFFECT;
+	effect = "SPELLFX_WEAKGLIMMER";
+	description = name;
+	text[3] = "DziaÅ‚anie nieznane.";
+	inv_zbias = INVCAM_ENTF_MISC_STANDARD;
+};
+
+
+func void use_zeitspalt_addon()
+{
+	if(Npc_IsPlayer(self))
 	{
-		if (Npc_IsPlayer(self))
-		{
-			Wld_PlayEffect("spellFX_BELIARSRAGE",  self, self, 0, 0, 0, FALSE);
-
-			// FIXME_Nico: DropUnconscious (DropDead funktioniert bereits)
-			//Npc_ChangeAttribute(self, ATR_MANA, -self.attribute[ATR_MANA]);
-			//Npc_ChangeAttribute(self, ATR_HITPOINTS, -self.attribute[ATR_HITPOINTS] + 2);
-			// Bereits laufenden Effekt beenden, damit die Kamera nicht ausrastet...
-			// (beim Wechsel immer noch starker Morph-Effekt, aber nicht mehr andauernd)
-			Wld_StopEffect("SLOW_MOTION");
-			Wld_PlayEffect("SLOW_MOTION", self, self, 0, 0, 0, FALSE);
-		};
+		Wld_PlayEffect("spellFX_BELIARSRAGE",self,self,0,0,0,FALSE);
+		Wld_StopEffect("SLOW_MOTION");
+		Wld_PlayEffect("SLOW_MOTION",self,self,0,0,0,FALSE);
 	};
+};
+

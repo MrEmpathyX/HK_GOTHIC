@@ -16,10 +16,10 @@ func int C_RefuseTalk (var C_NPC slf, var C_NPC oth)
 	if (slf.aivar[AIV_TalkedToPlayer] == FALSE)
 	&& (Npc_GetDistToWP(slf, slf.wp) > 500)
 	{
-		if (Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(Lothar))
+		/*if (Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(Lothar))
 		{
 			return TRUE;
-		};
+		};*/
 	};
 	
 	//------ Player hat falsche Rüstung an ------

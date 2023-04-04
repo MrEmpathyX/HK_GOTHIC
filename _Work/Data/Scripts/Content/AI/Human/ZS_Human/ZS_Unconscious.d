@@ -1,7 +1,7 @@
 // ********************************
 // ZS_Unconscious
 // --------------
-// wird auch vom Spieler ausgeführt
+// wird auch vom Spieler ausgef?hrt
 // ********************************
 
 func void ZS_Unconscious ()
@@ -39,7 +39,7 @@ func void ZS_Unconscious ()
 	if (self.guild < GIL_SEPERATOR_HUM)
 	&& (Npc_IsPlayer(other))								
 	{
-		self.aivar[AIV_DefeatedByPlayer] = TRUE; //wird nur hier gesetzt, nie verändert!
+		self.aivar[AIV_DefeatedByPlayer] = TRUE; //wird nur hier gesetzt, nie verï¿½ndert!
 		self.aivar[AIV_LastFightAgainstPlayer] = FIGHT_LOST;
 		
 		if (self.aivar[AIV_LastPlayerAR] == AR_NONE)
@@ -67,8 +67,7 @@ func void ZS_Unconscious ()
 		};
 	};
 	
-	// ------ weil sonst Händler bevor man zum ersten Mal TRADE gewählt hat nix haben ------
-	B_GiveTradeInv(self);//Joly:	STEHEN LASSEN VOR ->(self.aivar[AIV_VictoryXPGiven] = TRUE)!!!!!!!!!!!!!!!
+	// ------ weil sonst Hï¿½ndler bevor man zum ersten Mal TRADE gewï¿½hlt hat nix haben ----	B_GiveTradeInv(self);//Joly:	STEHEN LASSEN VOR ->(self.aivar[AIV_VictoryXPGiven] = TRUE)!!!!!!!!!!!!!!!
 	B_ClearRuneInv(self);//Hoshi, damit der Player keine Runen findet!
 
 	// ------ XP ------
@@ -80,15 +79,10 @@ func void ZS_Unconscious ()
 		self.aivar[AIV_VictoryXPGiven] = TRUE;
 	};
 			
-	// ------ Equippte Waffen können nicht genommen werden! ------
+	// ------ Equippte Waffen k?nnen nicht genommen werden! ------
 	AI_UnequipWeapons (self);
 	
-	// ----- STORY ------
-	if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID (Dar))
-	&& (Hlp_GetInstanceID(other) == Hlp_GetInstanceID (Cipher))
-	{
-		Dar_LostAgainstCipher = TRUE;
-	};
+	
 };
 	
 func int ZS_Unconscious_Loop ()
@@ -121,12 +115,7 @@ func void ZS_Unconscious_End ()
 	};
 	
 	// ------ Story: Raven ------
-	if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(Raven))
-	{
-		self.aivar[AIV_MagicUser] = MAGIC_ALWAYS;
-		B_Attack (self, hero, AR_GuildEnemy, 0);
-		return;
-	};
+	
 	
 	// FUNC 
 	
@@ -171,5 +160,4 @@ func void ZS_Unconscious_End ()
 	AI_StartState (self, ZS_HealSelf, 0, "");
 	return;
 };
-
 

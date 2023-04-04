@@ -239,62 +239,7 @@ FUNC VOID PC_Booze_SchnellerHering_Info()
 	};
 	B_ENDPRODUCTIONDIALOG ();
 };	
-//*******************************************************
-// Aufladen des Auge Innos
-//*******************************************************
-INSTANCE PC_Charge_InnosEye (C_INFO)
-{
-	nr       		= 1;
-	npc				= PC_Hero;
-	condition		= PC_Charge_InnosEye_Condition;
-	information		= PC_Charge_InnosEye_Info;
-	permanent		= TRUE;
-	description		= "Ponowne na³aduj Oko Innosa"; 
-};
-FUNC INT PC_Charge_InnosEye_Condition()
-{	
-	if((PLAYER_MOBSI_PRODUCTION	==	MOBSI_POTIONALCHEMY) 
-	&& (PLAYER_TALENT_ALCHEMY[CHARGE_INNOSEYE] == TRUE)
-	&& (Npc_HasItems (hero,ItMi_InnosEye_Discharged_MIS) >= 1))
-	&& (BoozeStart == FALSE)
-	&& (TabakStart == FALSE)
-	&& (HealthStart == FALSE)
-	&& (ManaStart == FALSE)
-	&& (SpecialStart == FALSE)
-	{		
-		return TRUE;
-	};
-};
-FUNC VOID PC_Charge_InnosEye_Info ()
-{
-	if 	(
-			(
-				(Npc_HasItems (hero, ItAt_IcedragonHeart) >= 1)
-				|| 		(Npc_HasItems (hero, ItAt_RockdragonHeart)	>= 1)
-				|| 		(Npc_HasItems (hero, ItAt_FiredragonHeart)	>= 1)
-				|| 		(Npc_HasItems (hero, ItAt_SwampdragonHeart)	>= 1)	
-			)
-			&& 		(Npc_HasItems (hero, ItMi_InnosEye_Discharged_MIS)    >= 1)	
-		) 
-	{
-		if 		(Npc_HasItems (hero, ItAt_SwampdragonHeart	)	>= 1){Npc_RemoveInvItems (hero,ItAt_SwampdragonHeart  ,1);}
-		else if	(Npc_HasItems (hero, ItAt_RockdragonHeart	) 	>= 1){Npc_RemoveInvItems (hero,ItAt_RockdragonHeart	  ,1);}
-		else if	(Npc_HasItems (hero, ItAt_FiredragonHeart	) 	>= 1){Npc_RemoveInvItems (hero,ItAt_FiredragonHeart	  ,1);}
-		else if	(Npc_HasItems (hero, ItAt_IcedragonHeart	) 	>= 1){Npc_RemoveInvItems (hero,ItAt_IcedragonHeart	  ,1);};
-	
-		Npc_RemoveInvItems (hero,ItMi_InnosEye_Discharged_MIS	  ,1);
-		
-		CreateInvItems	   (hero,ItMi_InnosEye_MIS,1);  
-		
-		Print (PRINT_AlchemySuccessInnoseye);
-	}
-	else 
-	{
-		Print (PRINT_ProdItemsMissing);
-		CreateInvItems (self, ItMi_Flask,1);
-	};	
-	B_ENDPRODUCTIONDIALOG ();
-};
+
 //*******************************************************
 //Mana Tränke 
 //*******************************************************
@@ -1218,50 +1163,4 @@ FUNC VOID PC_ItMi_Tabak_Mushroom_01()
 	Print (PRINT_TabakSuccess);
 	
 	B_ENDPRODUCTIONDIALOG ();		
-};
-
-
-INSTANCE PC_ItPo_MegaDrink (C_INFO)
-{
-	nr       		= 2;
-	npc				= PC_Hero;
-	condition		= PC_ItPo_MegaDrink_Condition;
-	information		= PC_ItPo_MegaDrink_Info;
-	permanent		= TRUE;
-	description		= "Mikstura ze smoczych jaj (10 smoczych jaj, 1 czarna per³a, 1 porcja siarki)"; 
-};
-
-FUNC INT PC_ItPo_MegaDrink_Condition()
-{	
-	if((PLAYER_MOBSI_PRODUCTION	==	MOBSI_POTIONALCHEMY) 
-	&& (PLAYER_TALENT_ALCHEMY[POTION_MegaDrink] == TRUE))
-	&& (BoozeStart == FALSE)
-	&& (TabakStart == FALSE)
-	&& (HealthStart == FALSE)
-	&& (ManaStart == FALSE)
-	&& (SpecialStart == FALSE)
-	{		
-			return TRUE;
-	};
-};
-
-FUNC VOID PC_ItPo_MegaDrink_Info ()
-{
-	if (Npc_HasItems (hero, ItAt_DragonEgg_MIS) >= 10) 
-	&& (Npc_HasItems (hero, ItMi_DarkPearl)    >= 1) 
-	&& (Npc_HasItems (hero, ItMi_Sulfur)    >= 1) 
-	{
-		Npc_RemoveInvItems (hero,ItAt_DragonEgg_MIS ,10);
-		Npc_RemoveInvItems (hero,ItMi_DarkPearl	  ,1);
-		Npc_RemoveInvItems (hero,ItMi_Sulfur	  ,1);
-		
-		CreateInvItems 	   (hero,ItPo_MegaDrink,1); 
-		Print (PRINT_AlchemySuccess);
-	}
-		else 
-	{
-		Print (PRINT_ProdItemsMissing);
-		CreateInvItems (self, ItMi_Flask,1);
-	};	
-	B_ENDPRODUCTIONDIALOG ();
 };

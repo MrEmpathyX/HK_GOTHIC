@@ -11,25 +11,6 @@ func void B_MM_AssessDamage ()
 	// EXIT IF
 	
 	// ------ SONDERFALL: Magic Golem ------ 				//JUUUUNGEEEEE!!!
-	if (Npc_HasItems (other, Holy_Hammer_MIS) > 0)
-	{
-		var C_NPC MagGol; MagGol = Hlp_GetNpc(MagicGolem);
-		Npc_GetInvItem(other, Holy_Hammer_MIS); //befüllt 'item'
-		var C_ITEM OthWeap; OthWeap = Npc_GetReadiedWeapon(other);
-		
-		if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(MagGol))
-		&& (Hlp_GetInstanceID(OthWeap) == Hlp_GetInstanceID(item))
-		{
-			Npc_ChangeAttribute (self, ATR_HITPOINTS, -1000);
-			return;
-		};
-	};		
-	
-	if (self.guild == GIL_STONEGUARDIAN)
-	&& (self.aivar[AIV_EnemyOverride] == TRUE)
-	{
-		B_AWAKE_STONEGUARDIAN (self);
-	};	
 	
 	// ----- wenn Monster Beute von Angreifer ------
 	if (C_PredatorFoundPrey(other,self))

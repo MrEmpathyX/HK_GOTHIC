@@ -76,14 +76,3 @@ instance Shadowbeast_Addon_Fire (Mst_Default_Shadowbeast_Addon_Fire)
 
 	effect	= "SPELLFX_FIREARMOR";
 };
-instance Shadowbeast_Addon_Fire_CanyonLib (Mst_Default_Shadowbeast_Addon_Fire)
-{
-	B_SetVisuals_Shadowbeast_Fire();
-	Npc_SetToFistMode(self);
-	flags	= NPC_FLAG_GHOST;
-
-	aivar[AIV_EnemyOverride] 		= TRUE;
-	aivar[AIV_MaxDistToWp]			= 900; 
-	aivar[AIV_OriginalFightTactic] 	= FAI_GARGOYLE;
-	effect	= "SPELLFX_FIREARMOR";
-};

@@ -73,22 +73,3 @@ INSTANCE Waran	(Mst_Default_Waran)
 	B_SetVisuals_Waran();
 	Npc_SetToFistMode(self);
 };
-
-//Addon
-
-
-INSTANCE BeachWaran1	(Mst_Default_Waran)
-{
-	B_SetVisuals_Waran();
-	Npc_SetToFistMode(self);
-};
-
-
-INSTANCE BeachWaran2	(Mst_Default_Waran)
-{
-	B_SetVisuals_Waran();
-	Npc_SetToFistMode(self);
-};
-
-
-

@@ -74,20 +74,3 @@ INSTANCE Minecrawler	(Mst_Default_Minecrawler)
 	B_SetVisuals_Minecrawler();
 	Npc_SetToFistMode(self);
 };
-//*****************
-//	Minecrawler_Priest im PriesterHaus der ADW
-//*****************
-
-INSTANCE Minecrawler_Priest	(Mst_Default_Minecrawler)
-{
-	B_SetVisuals_Minecrawler();
-	Npc_SetToFistMode(self);
-};
-INSTANCE GoldMinecrawler	(Mst_Default_Minecrawler)
-{
-	B_SetVisuals_Minecrawler();
-	Npc_SetToFistMode(self);
-};
-
-
-

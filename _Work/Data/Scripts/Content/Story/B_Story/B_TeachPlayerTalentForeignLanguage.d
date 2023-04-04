@@ -29,11 +29,11 @@ func int B_TeachPlayerTalentForeignLanguage (var C_NPC slf, var C_NPC oth, var i
 	Log_CreateTopic (TOPIC_Language,LOG_NOTE);
 	
 	// ------ Körperteil nehmen lernen ------
-	
+	/*
 	if (Language == LANGUAGE_1) {	PLAYER_TALENT_FOREIGNLANGUAGE[LANGUAGE_1] = TRUE;	B_LogEntry (TOPIC_Language,LogText_Addon_Language_1); };
 	if (Language == LANGUAGE_2) {	PLAYER_TALENT_FOREIGNLANGUAGE[LANGUAGE_2] = TRUE;	B_LogEntry (TOPIC_Language,LogText_Addon_Language_2); };  
 	if (Language == LANGUAGE_3) {	PLAYER_TALENT_FOREIGNLANGUAGE[LANGUAGE_3] = TRUE;   B_LogEntry (TOPIC_Language,LogText_Addon_Language_3); };  
-
+*/
 	PrintScreen			(PRINT_LearnForeignLanguage, -1, -1, FONT_Screen, 2);
 	
 	// ------ bei jedem Körperteil: ForeignLanguage-Talent lernen (programmvariable, wird nur zur Ausgabe in StatusScreen benutzt) ------

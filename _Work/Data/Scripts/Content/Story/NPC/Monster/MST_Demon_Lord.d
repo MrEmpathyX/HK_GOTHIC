@@ -74,16 +74,3 @@ INSTANCE DemonLord	(Mst_Default_DemonLord)
 	B_SetVisuals_DemonLord();
 	Npc_SetToFistMode(self);
 };
-
-
-//**************************
-//	Xardas_DT_DemonLord    														
-//**************************
-
-INSTANCE Xardas_DT_DemonLord	(Mst_Default_DemonLord)
-{
-	B_SetVisuals_DemonLord();
-	Npc_SetToFistMode(self);
-};
-
-

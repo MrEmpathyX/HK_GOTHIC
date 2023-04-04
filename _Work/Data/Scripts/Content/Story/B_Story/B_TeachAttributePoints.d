@@ -20,7 +20,7 @@ func int B_TeachAttributePoints (var C_NPC slf, var C_NPC oth, var int attrib, v
 	// ------ falscher Parameter ------
 	if (attrib!=ATR_STRENGTH) && (attrib!=ATR_DEXTERITY) && (attrib!=ATR_MANA_MAX)
 	{
-		Print ("*** B³¹d: Z³y parametr ***");
+		Print ("*** ERROR: Wrong Parameter ***");
 		return FALSE;
 	};
 	

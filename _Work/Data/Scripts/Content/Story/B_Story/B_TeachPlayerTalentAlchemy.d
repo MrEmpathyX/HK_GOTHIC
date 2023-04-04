@@ -70,30 +70,3 @@ func int B_TeachPlayerTalentAlchemy (var C_NPC slf, var C_NPC oth, var int potio
 	
 	return TRUE;
 };
-	
-
-		
-
-	
-	
-
-
-
-	
-	
-	
-	
-
-	
-	
-
-	
-	
-	
-	
-	
-
-	
-	
-	
-

@@ -65,12 +65,7 @@ func void B_MM_AssessOthersDamage ()
 	
 	//FUNC
 	
-	if (self.guild == GIL_STONEGUARDIAN)
-	&& (victim.guild == GIL_STONEGUARDIAN)
-	&& (self.aivar[AIV_EnemyOverride] == TRUE)
-	{
-		B_AWAKE_STONEGUARDIAN (self);
-	};	
+	
 
 	// ------ Freund wird angegriffen ------
 	if (Wld_GetGuildAttitude(self.guild, victim.guild) == ATT_FRIENDLY)

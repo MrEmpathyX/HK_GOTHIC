@@ -2,7 +2,7 @@
 // LOG_Topic Constants 
 // -------------------
 // (für LOG_NOTE)
-// *******************
+
 // ------ Händler ------
 const string	TOPIC_Trader_OC				=   "Handel w zamku";
 const string	TOPIC_CityTrader			=	"Handel w Khorinis";
@@ -31,4 +31,3 @@ const string	TOPIC_Language				= 	"Jêzyk budowniczych";
 // ------ Sonstiges ------
 const string	Topic_Bonus					=	"Miejsca specjalne"; //z.B. täglich essen abholen...
 const string	Topic_Diebesgilde			=	"Gildia z³odziei"; 
-

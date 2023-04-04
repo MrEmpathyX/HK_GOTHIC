@@ -60,8 +60,8 @@ func int ZS_Circle_Loop ()
 					Wld_PlayEffect("spellFX_LIGHTSTAR_RingRitual",  ItMi_AmbossEffekt_Addon, ItMi_AmbossEffekt_Addon, 0, 0, 0, FALSE );
 				};
 			};
-	}
-	else if (MIS_RitualInnosEyeRepair != LOG_SUCCESS)
+	} ;
+	/*else if (MIS_RitualInnosEyeRepair != LOG_SUCCESS)
 	{
 		randy = Hlp_Random (1000);
 
@@ -84,7 +84,7 @@ func int ZS_Circle_Loop ()
 						Wld_PlayEffect("spellFX_INCOVATION_BLUE",  self, self, 0, 0, 0, FALSE );
 					};
 				};	
-	};
+	};*/
 	
 	return LOOP_CONTINUE;
 };

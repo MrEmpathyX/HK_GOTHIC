@@ -761,4 +761,4 @@ const int Face_N_Fortuno		= 	159;
 const int Face_P_Greg		= 	160;
 const int Face_N_Pirat01	= 	161;
 const int Face_N_ZombieMud	= 	162;
-const int Face_N_Baraback_01 =  500;
+

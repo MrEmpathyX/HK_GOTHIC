@@ -10,15 +10,6 @@
 
 func int B_AssessEnemy()
 {
-	// EXIT IF...
-		
-	// ------- TESTMODE: Levelinspektor wird ignoriert ------
-	var C_NPC PCL; PCL = Hlp_GetNpc(PC_Levelinspektor);
-	if (Hlp_GetInstanceID(other) == Hlp_GetInstanceID(PCL))
-	{
-		return FALSE;
-	};
-
 	//ADDON>
 	// ------- NoFightParker NPC kloppt sich nur mit Monstern oder dem Player, wird auch nie angegriffen ------
 	if ((Hlp_GetInstanceID(other) != Hlp_GetInstanceID(hero))
@@ -65,7 +56,7 @@ func int B_AssessEnemy()
 		return FALSE;
 	};
 	
-	// ------- Mag-Golem-Lares-Hack ------------
+	/*// ------- Mag-Golem-Lares-Hack ------------
 	var C_NPC MGO; MGO = Hlp_GetNpc(MagicGolem);
 	var C_NPC LAR; LAR = Hlp_GetNpc(VLK_449_Lares);
 	
@@ -73,7 +64,7 @@ func int B_AssessEnemy()
 	&&  (Hlp_GetInstanceID(other) == Hlp_GetInstanceID(MGO))
 	{
 		return FALSE;
-	};
+	};*/
 	
 	// ------- OVERRIDE für Enemies, die noch vorher quatschen sollen ------
 	if ( (self.aivar[AIV_EnemyOverride] == TRUE) || (other.aivar[AIV_EnemyOverride] == TRUE) )

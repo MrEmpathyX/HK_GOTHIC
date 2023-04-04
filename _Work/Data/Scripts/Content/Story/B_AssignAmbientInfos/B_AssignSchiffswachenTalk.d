@@ -20,31 +20,31 @@ func void B_AssignSchiffswachenGuard (var C_NPC Schiffswache)
 			};
 		AI_StopProcessInfos (Schiffswache);
 		Npc_SetRefuseTalk 	(Schiffswache,60);
-		Npc_SetRefuseTalk 	(Pal_220_Schiffswache,60);//Joly: Damit alle die Schnauze halten, wenn der SC auf dem Schiff rumwandert.
-		Npc_SetRefuseTalk 	(Pal_221_Schiffswache,60);
-		Npc_SetRefuseTalk 	(Pal_222_Schiffswache,60);
-		Npc_SetRefuseTalk 	(Pal_223_Schiffswache,60);
-		Npc_SetRefuseTalk 	(Pal_224_Schiffswache,60);
-		Npc_SetRefuseTalk 	(Pal_225_Schiffswache,60);
-		Npc_SetRefuseTalk 	(Pal_226_Schiffswache,60);
-		Npc_SetRefuseTalk 	(Pal_227_Schiffswache,60);
-		Npc_SetRefuseTalk 	(Pal_228_Schiffswache,60);
+		//Npc_SetRefuseTalk 	(Pal_220_Schiffswache,60);//Joly: Damit alle die Schnauze halten, wenn der SC auf dem Schiff rumwandert.
+		//Npc_SetRefuseTalk 	(Pal_221_Schiffswache,60);
+		//Npc_SetRefuseTalk 	(Pal_222_Schiffswache,60);
+		//Npc_SetRefuseTalk 	(Pal_223_Schiffswache,60);
+		//Npc_SetRefuseTalk 	(Pal_224_Schiffswache,60);
+		//Npc_SetRefuseTalk 	(Pal_225_Schiffswache,60);
+		//Npc_SetRefuseTalk 	(Pal_226_Schiffswache,60);
+		//Npc_SetRefuseTalk 	(Pal_227_Schiffswache,60);
+		//Npc_SetRefuseTalk 	(Pal_228_Schiffswache,60);
 	}
 	else
 	{
 		B_Say (self, other, "$ALARM"); 
 		AI_StopProcessInfos (self);
 		B_Attack (self, other, AR_GuardStopsIntruder, 1);//Joly: Ohne Erlaubnis hat der SC da nix verloren!!!!!!!!!!!
-		Npc_SetRefuseTalk 	(Schiffswache,20);
-		Npc_SetRefuseTalk 	(Pal_220_Schiffswache,20);//Joly: Damit alle die Schnauze halten, wenn der SC sich in sicherheit bringen will.
-		Npc_SetRefuseTalk 	(Pal_221_Schiffswache,20);
-		Npc_SetRefuseTalk 	(Pal_222_Schiffswache,20);
-		Npc_SetRefuseTalk 	(Pal_223_Schiffswache,20);
-		Npc_SetRefuseTalk 	(Pal_224_Schiffswache,20);
-		Npc_SetRefuseTalk 	(Pal_225_Schiffswache,20);
-		Npc_SetRefuseTalk 	(Pal_226_Schiffswache,20);
-		Npc_SetRefuseTalk 	(Pal_227_Schiffswache,20);
-		Npc_SetRefuseTalk 	(Pal_228_Schiffswache,20);
+		//Npc_SetRefuseTalk 	(Schiffswache,20);
+		//Npc_SetRefuseTalk 	(Pal_220_Schiffswache,20);//Joly: Damit alle die Schnauze halten, wenn der SC sich in sicherheit bringen will.
+		//Npc_SetRefuseTalk 	(Pal_221_Schiffswache,20);
+		//Npc_SetRefuseTalk 	(Pal_222_Schiffswache,20);
+		//Npc_SetRefuseTalk 	(Pal_223_Schiffswache,20);
+		//Npc_SetRefuseTalk 	(Pal_224_Schiffswache,20);
+		//Npc_SetRefuseTalk 	(Pal_225_Schiffswache,20);
+		//Npc_SetRefuseTalk 	(Pal_226_Schiffswache,20);
+		///Npc_SetRefuseTalk 	(Pal_227_Schiffswache,20);
+		//Npc_SetRefuseTalk 	(Pal_228_Schiffswache,20);
 	};
 };
 

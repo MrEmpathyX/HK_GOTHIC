@@ -3,19 +3,43 @@
 // NPC studiert auf WP 
 // *********************
 
-func void ZS_Study_WP ()
-{	
-	Perception_Set_Normal();
+//func void ZS_Study_WP ()
+//{	
+//	Perception_Set_Normal();
+//
+//	B_ResetAll (self);
+//	
+//	AI_SetWalkmode 	(self, NPC_WALK);		
+//	
+//	AI_GotoWP	(self, self.wp);
+//	AI_AlignToWP(self);
+//
+//	self.aivar[AIV_TAPOSITION] = NOTINPOS;
+//};
 
+
+func void ZS_Study_WP()
+{
+	Perception_Set_Normal();
+	
 	B_ResetAll (self);
 	
-	AI_SetWalkmode 	(self, NPC_WALK);		
+	AI_SetWalkmode 	(self,NPC_WALK);
+		
+	if (Npc_GetDistToWP (self,self.wp) > TA_DIST_SELFWP_MAX) 
+	{
+		AI_GotoWP	(self, self.wp);
+	};
 	
-	AI_GotoWP	(self, self.wp);
-	AI_AlignToWP(self);
-
 	self.aivar[AIV_TAPOSITION] = NOTINPOS;
-};
+	};	
+
+
+
+
+
+
+
 
 func int ZS_Study_WP_loop()
 {
@@ -82,15 +106,6 @@ func int ZS_Study_WP_loop()
 			AI_UseItemToState	(self,	Fakescroll_Addon,	-1);
 			Npc_SetStateTime(self, 0);
 	
-			if  (
-				   ((eventrandy < 5) && (CurrentLevel == NEWWORLD_ZEN))
-				|| ((eventrandy == 1) && (CurrentLevel == ADDONWORLD_ZEN))
-				)
-				&& (self.guild == GIL_KDW)//Erdbeben überall wo die KDW herumhängen
-				&& (RavenIsDead == FALSE) 
-					{
-						B_EVENT_PORTAL_EARTHQUAKE ();			
-					};
 		};
 	}
 

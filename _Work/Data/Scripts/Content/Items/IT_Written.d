@@ -235,7 +235,7 @@ INSTANCE ItWr_EinhandBuch (C_ITEM)
 	material 				=	MAT_LEATHER;
 
 	scemeName				=	"MAP";
-	description				= 	"Die südländische Verteidigung";
+	description				= 	"Kunszt obronny po³udniowców";
 	
 	TEXT[2] 				=  "Ksi¹¿ka opisuj¹ca sztukê";
 	TEXT[3] 				=  "walki broniami jednorêcznymi.";

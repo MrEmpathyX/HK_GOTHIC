@@ -121,7 +121,7 @@ INSTANCE Summoned_Wolf	(Mst_Default_Wolf)
 INSTANCE YWolf	(Mst_Default_Wolf)
 {
 	level							=	3;
-	name							=	"M這dy wilk";
+	name							=	"M?ody wilk";
 	//----- Attribute ----
 	attribute	[ATR_STRENGTH]		=	10;
 	attribute	[ATR_DEXTERITY]		=	10;
@@ -142,103 +142,3 @@ INSTANCE YWolf	(Mst_Default_Wolf)
 	Npc_SetToFistMode(self);
 	CreateInvItems (self, ItFoMuttonRaw, 1);
 };
-
-
-
-//************
-//	Missions W闤fe f�r Pepe: YWolf    	
-//************
-
-
-INSTANCE PEPES_YWolf1	(Mst_Default_Wolf)
-{
-	name							=	"M這dy wilk";
-	level							=	3;
-	
-	//----- Attribute ----
-	attribute	[ATR_STRENGTH]		=	15;
-	attribute	[ATR_DEXTERITY]		=	15;
-	attribute	[ATR_HITPOINTS_MAX]	=	30;
-	attribute	[ATR_HITPOINTS]		=	30;
-	
-	//----- Protections ----
-	protection	[PROT_BLUNT]		=	15;
-	protection	[PROT_EDGE]			=	15;
-	protection	[PROT_POINT]		=	0;
-	protection	[PROT_FIRE]			=	15;
-	protection	[PROT_FLY]			=	15;
-	
-	B_SetVisuals_Wolf();
-	Npc_SetToFistMode(self);
-	CreateInvItems (self, ItFoMuttonRaw, 1);
-};
-
-
-INSTANCE PEPES_YWolf2	(Mst_Default_Wolf)
-{
-	level							=	3;
-	name							=	"M這dy wilk";
-	//----- Attribute ----
-	attribute	[ATR_STRENGTH]		=	15;
-	attribute	[ATR_DEXTERITY]		=	15;
-	attribute	[ATR_HITPOINTS_MAX]	=	30;
-	attribute	[ATR_HITPOINTS]		=	30;
-	
-	//----- Protections ----
-	protection	[PROT_BLUNT]		=	15;
-	protection	[PROT_EDGE]			=	15;
-	protection	[PROT_POINT]		=	0;
-	protection	[PROT_FIRE]			=	15;
-	protection	[PROT_FLY]			=	15;
-	
-	B_SetVisuals_Wolf();
-	Npc_SetToFistMode(self);
-	CreateInvItems (self, ItFoMuttonRaw, 1);
-};
-
-
-INSTANCE PEPES_YWolf3	(Mst_Default_Wolf)
-{
-	level							=	3;
-	name							=	"M這dy wilk";
-	//----- Attribute ----
-	attribute	[ATR_STRENGTH]		=	15;
-	attribute	[ATR_DEXTERITY]		=	15;
-	attribute	[ATR_HITPOINTS_MAX]	=	30;
-	attribute	[ATR_HITPOINTS]		=	30;
-	
-	//----- Protections ----
-	protection	[PROT_BLUNT]		=	15;
-	protection	[PROT_EDGE]			=	15;
-	protection	[PROT_POINT]		=	0;
-	protection	[PROT_FIRE]			=	15;
-	protection	[PROT_FLY]			=	15;
-	
-	B_SetVisuals_Wolf();
-	Npc_SetToFistMode(self);
-	CreateInvItems (self, ItFoMuttonRaw, 1);
-};
-
-
-INSTANCE PEPES_YWolf4	(Mst_Default_Wolf)
-{
-	level							=	3;
-	name							=	"M這dy wilk";
-	//----- Attribute ----
-	attribute	[ATR_STRENGTH]		=	15;
-	attribute	[ATR_DEXTERITY]		=	15;
-	attribute	[ATR_HITPOINTS_MAX]	=	30;
-	attribute	[ATR_HITPOINTS]		=	30;
-	
-	//----- Protections ----
-	protection	[PROT_BLUNT]		=	15;
-	protection	[PROT_EDGE]			=	15;
-	protection	[PROT_POINT]		=	0;
-	protection	[PROT_FIRE]			=	15;
-	protection	[PROT_FLY]			=	15;
-	
-	B_SetVisuals_Wolf();
-	Npc_SetToFistMode(self);
-	CreateInvItems (self, ItFoMuttonRaw, 1);
-};
-

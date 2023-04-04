@@ -4,35 +4,6 @@
 
 FUNC void B_AssessFollowPlayer ()
 {
-	// ------ Sonderfall: Diego ------
-	if (Hlp_GetInstanceID (self) == Hlp_GetInstanceID(DiegoOW))
-	{	
-		if (Npc_GetDistToNpc(self, hero) < self.aivar[AIV_FollowDist])
-		&& (self.aivar[AIV_TAPOSITION] == FALSE)
-		{
-			Npc_ClearAIQueue (self);
-			AI_StandUp (self);
-			self.aivar[AIV_TAPOSITION] = TRUE;
-		}
-		else if (C_DiegoTooFar(0))
-		&& 		(self.aivar[AIV_TAPOSITION] == FALSE)
-		{
-			Npc_ClearAIQueue (self);
-			AI_StandUp (self);
-			self.aivar[AIV_TAPOSITION] = TRUE;
-			
-			if (Npc_GetDistToNpc (self, hero) > PERC_DIST_DIALOG)
-			{
-				B_Say (self,other, "$SC_HEYWAITASECOND");
-			};
-		}
-		else 
-		{	
-			B_AssessPlayer ();
-		};
-		
-		return;
-	};	
 		
 	//FUNC
 	
@@ -102,21 +73,6 @@ func int ZS_Follow_Player_Loop ()
 {
 	if (Npc_GetDistToNpc (self, hero) > self.aivar[AIV_FollowDist])
 	{
-		// ------ Sonderfall: Diego ------
-		if (Hlp_GetInstanceID (self) == Hlp_GetInstanceID(DiegoOW))
-		{
-			if (C_DiegoTooFar(0))
-			{
-				if (Npc_GetStateTime(self) > 1)
-				{
-					B_TurnToNpc (self, hero);
-						
-					Npc_SetStateTime (self, 0);
-				};
-				
-				return LOOP_CONTINUE;
-			};
-		};
 		
 		// ------ normale Behandlung ------
 		if (!C_BodyStateContains(self, BS_SWIM))

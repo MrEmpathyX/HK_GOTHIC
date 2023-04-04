@@ -259,7 +259,6 @@ CLASS C_SVM
 	var string NeedKey;					
 	var string NoMorePicks;	
 	var string NoPickLockTalent;
-	var string NoSweeping;
 	
 	var string PICKLOCKORKEYMISSING;	
 	var string KEYMISSING;
@@ -270,11 +269,6 @@ CLASS C_SVM
 	var string NOTHINGTOGET;
 	var string NOTHINGTOGET02;
 	var string NOTHINGTOGET03;
-	var string HEALSHRINE;
-	var string HEALLASTSHRINE;
-	var string IRDORATHTHEREYOUARE;
-	var string SCOPENSIRDORATHBOOK;
-	var string SCOPENSLASTDOOR;
 
 	//-------------Addon ----------------------
 	
@@ -290,22 +284,7 @@ CLASS C_SVM
 	var string STONEPLATE_2;
 	var string STONEPLATE_3;
 	
-	var string COUGH;
-	var string HUI;
-	
-	var string Addon_ThisLittleBastard;
-	var string ADDON_OPENADANOSTEMPLE;
-	
 	//Story Banditenlager Dialoge
-	var string	ATTENTAT_ADDON_DESCRIPTION;
-	var string  ATTENTAT_ADDON_DESCRIPTION2;
-	var string	ATTENTAT_ADDON_PRO;
-	var string 	ATTENTAT_ADDON_CONTRA;
-	
-	var string 	MINE_ADDON_DESCRIPTION;
-	var string 	ADDON_SUMMONANCIENTGHOST;
-	var string 	ADDON_ANCIENTGHOST_NOTNEAR;
-	
 	var string 	ADDON_GOLD_DESCRIPTION; 	
 };     
 
@@ -3245,7 +3224,6 @@ INSTANCE SVM_15	(C_SVM)		//	PLAYER	trocken,ernst
 	NeedKey					= 	"SVM_15_NeedKey"					;//Potrzebujê do tego klucza...
 	NoMorePicks				= 	"SVM_15_NoMorePicks"				;//Nie mam ju¿ wytrychów...
 	NoPickLockTalent		= 	"SVM_15_NoPickLockTalent"			;//Nie znam siê na otwieraniu zamków.
-	NoSweeping				= 	"SVM_15_NoSweeping"					;//Posprz¹tanie wszystkich komnat zajmie wieki!
 	
 	PICKLOCKORKEYMISSING	= 	"SVM_15_PICKLOCKORKEYMISSING"		;//Hm... Nie mam ani klucza, ani wytrychu.
 	KEYMISSING				= 	"SVM_15_KEYMISSING"					;//Bez w³aœciwego klucza nigdy tego nie otworzê!
@@ -3263,17 +3241,8 @@ INSTANCE SVM_15	(C_SVM)		//	PLAYER	trocken,ernst
 	Aargh_3					=	"SVM_15_Aargh_3"					;//Aargh
 	Dead					=	"SVM_15_Dead"						;//Aaaarhhh!
 	Awake					=	"SVM_15_Awake"						;//(budzi siê)
-	
-	// ------ Story SVMs ----------------------------------------------------------------------------
-	
-	IRDORATHTHEREYOUARE		= 	"SVM_15_IRDORATHTHEREYOUARE"		;//Hm... A wiêc tam jest twoja kryjówka. Cholernie daleko. Chyba bêdê potrzebowaæ statku...
-	HEALSHRINE				= 	"SVM_15_HEALSHRINE"					;//Innosie, obdarz mnie sw¹ ³ask¹ i oczyœæ tê kapliczkê.
-	HEALLASTSHRINE			= 	"SVM_15_HEALLASTSHRINE"				;//Innosie, obdarz mnie sw¹ ³ask¹ i tak dalej... No, to chyba ostatni raz.
-	SCOPENSIRDORATHBOOK		= 	"SVM_15_SCOPENSIRDORATHBOOK"		;//XARAK BENDARDO! Ach... Ksiêga zosta³a otwarta. W œrodku jest klucz i jakiœ list.
-	SCOPENSLASTDOOR			= 	"SVM_15_SCOPENSLASTDOOR"			;//KHADOSH EMEM KADAR! Otwórz siê!
 
 	//---------Addon SVMs----------------------------------------------------------------------------
-	//ADDON>
 	TRADE_1					= 	"SVM_15_Addon_TRADE_1"					;//Pohandlujmy.
 	TRADE_2					= 	"SVM_15_Addon_TRADE_2"					;//Poka¿ mi swoje towary.
 	TRADE_3					=	"SVM_15_Addon_TRADE_3"					;//Poka¿ mi, co masz.
@@ -3285,24 +3254,8 @@ INSTANCE SVM_15	(C_SVM)		//	PLAYER	trocken,ernst
 	STONEPLATE_1			= 	"SVM_15_Addon_STONEPLATE_1"				;//AKHANTAR!
 	STONEPLATE_2			= 	"SVM_15_Addon_STONEPLATE_2"				;//JHERHEDRA!
 	STONEPLATE_3			= 	"SVM_15_Addon_STONEPLATE_3"				;//URIZIEL RATIS!
-		
-	COUGH					=   "SVM_15_Addon_COUGH"					;//Och, ch³opie, brr!
-	HUI						=	"SVM_15_Addon_HUI"						;//Hahaaa!
 	
-	ATTENTAT_ADDON_DESCRIPTION	=	"SVM_15_ATTENTAT_ADDON_DESCRIPTION"		;//Co wiesz o próbie zabójstwa Estebana?
-	ATTENTAT_ADDON_DESCRIPTION2 = 	"SVM_15_ATTENTAT_ADDON_DESCRIPTION2"	;//A co do próby zabójstwa Estebana...
-	ATTENTAT_ADDON_PRO			=	"SVM_15_ATTENTAT_ADDON_PRO"				;//Zabijê tych zdrajców.
-	ATTENTAT_ADDON_CONTRA		=	"SVM_15_ATTENTAT_ADDON_CONTRA"			;//Chcê znaleŸæ tych ludzi, by wyst¹piæ przeciwko Estebanowi.
-	
-	MINE_ADDON_DESCRIPTION		=	"SVM_15_MINE_ADDON_DESCRIPTION"		;//Potrzebuj¹ ciê w kopalni.
-	ADDON_SUMMONANCIENTGHOST	=	"SVM_15_ADDON_SUMMONANCIENTGHOST"	;//Ighoriat Thorul. Przyzywam ciê, Quarhodronie, pradawny przywódco kasty wojowników!
-	ADDON_ANCIENTGHOST_NOTNEAR	=	"SVM_15_ADDON_ANCIENTGHOST_NOTNEAR"	;//Hmm... To tutaj nie dzia³a.
 	ADDON_GOLD_DESCRIPTION		=	"SVM_15_ADDON_GOLD_DESCRIPTION"		;//Co muszê wiedzieæ o wydobyciu z³ota?
-	
-	ADDON_THISLITTLEBASTARD		=   "SVM_15_Addon_ThisLittleBastard";		//Ach, ksiêga rozrachunkowa Francisa. Wygl¹da na to, ¿e ten cz³owiek napycha sobie z³otem kieszenie.
-	ADDON_OPENADANOSTEMPLE		=   "SVM_15_Addon_OPENADANOSTEMPLE";		//JHERHEDRA AKHANTAR!
-
-	//ADDON<
 };
 
 // ***************

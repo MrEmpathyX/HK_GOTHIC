@@ -19,9 +19,9 @@ FUNC VOID Use_Bookstand_01_S1()		//Buchständer in der Magierbibliothek
 		{
 			KNOWS_FIRE_CONTEST = TRUE; //für die Prüfung des Feuers 
 			
-			Log_CreateTopic (TOPIC_FireContest,LOG_MISSION);
-			Log_SetTopicStatus	(TOPIC_FireContest,LOG_RUNNING);
-			B_LogEntry (TOPIC_FireContest,"Jako nowicjusz mam prawo za¿¹daæ Próby Ognia, a ka¿dy z trzech magów nale¿¹cych do Najwy¿szej Rady przydzieli mi jakieœ zadanie. Po ukoñczeniu wszystkich misji zostanê przyjêty do Krêgu Ognia.");
+			//Log_CreateTopic (TOPIC_FireContest,LOG_MISSION);
+			//Log_SetTopicStatus	(TOPIC_FireContest,LOG_RUNNING);
+			//B_LogEntry (TOPIC_FireContest,"Jako nowicjusz mam prawo za¿¹daæ Próby Ognia, a ka¿dy z trzech magów nale¿¹cych do Najwy¿szej Rady przydzieli mi jakieœ zadanie. Po ukoñczeniu wszystkich misji zostanê przyjêty do Krêgu Ognia.");
 		};
 	
 		var int nDocID;

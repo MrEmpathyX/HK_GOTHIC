@@ -74,4 +74,3 @@ INSTANCE Blattcrawler	(Mst_Default_Blattcrawler)
 	B_SetVisuals_Blattcrawler();
 	Npc_SetToFistMode(self);
 };
-

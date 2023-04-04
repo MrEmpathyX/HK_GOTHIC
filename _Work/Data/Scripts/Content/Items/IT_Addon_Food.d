@@ -1,322 +1,246 @@
-/******************************************************************************************/
-//	RUM																	//
-/******************************************************************************************/
 
-CONST int Value_Rum = 30;
-CONST int Mana_Rum  = 10;
+const int VALUE_RUM = 30;
+const int MANA_RUM = 10;
+const int VALUE_GROG = 10;
+const int HP_GROG = 1;
+const int VALUE_SCHNELLERHERING = 30;
+const int VALUE_LOUSHAMMER = 30;
+const int MANA_LOUSHAMMER = 1;
+const int VALUE_SCHLAFHAMMER = 60;
+const int VALUE_FIRESTEW = 180;
+const int STR_FIRESTEW = 1;
+const int HP_FIRESTEW = 5;
+const int STR_MEATSOUP = 1;
+const int VALUE_SHELLFLESH = 60;
+const int HP_SHELLFLESH = 20;
 
-const int Value_Grog = 10;
-const int HP_Grog	 = 1;
-
-const int Value_SchnellerHering	= 30;	
-
-const int Value_LousHammer = 30;
-const int Mana_LousHammer = 1;
-
-const int Value_SchlafHammer = 60;
-
-const int Value_FireStew = 180;
-const int STR_FireStew	= 1;
-const int HP_FireStew	= 5;
-const int STR_MeatSoup	= 1;
-
-const int Value_Shellflesh	= 60;
-const int HP_Shellflesh		= 20;
-//---------------------------------------------------------------------
-//	Muschelfleisch
-//---------------------------------------------------------------------
-INSTANCE ItFo_Addon_Shellflesh (C_Item)
+instance ITFO_ADDON_SHELLFLESH(C_ITEM)
 {
-	name 				=	"Ostryga";
-
-	mainflag 			=	ITEM_KAT_FOOD;
-	flags 				=	ITEM_MULTI;
-
-	value 				=	Value_Shellflesh;
-
-	visual 				=	"ItAt_Meatbugflesh.3DS";
-	material 			=	MAT_LEATHER;
-	scemeName			=	"FOODHUGE";
-	on_state[0]			=	Use_Shellflesh;
-
-	description			= 	name;
-	TEXT[0]				= 	"Soczysta ostryga";
-	TEXT[1]				= 	NAME_Bonus_HP; COUNT[1] = HP_Shellflesh;
-	TEXT[2]				= 	"Smaczna nawet na surowo";
-	TEXT[3]				= 	"";
-	TEXT[5]				= 	NAME_Value;	COUNT[5]	= value;
+	name = "Ostryga";
+	mainflag = ITEM_KAT_FOOD;
+	flags = ITEM_MULTI;
+	value = VALUE_SHELLFLESH;
+	visual = "ItAt_Meatbugflesh.3DS";
+	material = MAT_LEATHER;
+	scemename = "FOODHUGE";
+	on_state[0] = use_shellflesh;
+	description = name;
+	text[0] = "Soczysta ostryga";
+	text[1] = NAME_BONUS_HP;
+	count[1] = HP_SHELLFLESH;
+	text[2] = "Smaczna nawet na surowo";
+	text[3] = "";
+	text[5] = NAME_VALUE;
+	count[5] = value;
 };
 
-	FUNC VOID Use_Shellflesh()
+
+func void use_shellflesh()
+{
+	Npc_ChangeAttribute(self,ATR_HITPOINTS,HP_SHELLFLESH);
+};
+
+
+instance ITFO_ADDON_RUM(C_ITEM)
+{
+	name = "Rum";
+	mainflag = ITEM_KAT_FOOD;
+	flags = ITEM_MULTI;
+	value = VALUE_RUM;
+	visual = "ItMi_Rum_02.3ds";
+	material = MAT_GLAS;
+	on_state[0] = userum;
+	scemename = "POTIONFAST";
+	description = "Bia≥y rum";
+	text[1] = NAME_BONUS_MANA;
+	count[1] = MANA_RUM;
+	text[5] = NAME_VALUE;
+	count[5] = VALUE_RUM;
+};
+
+
+func void userum()
+{
+	Npc_ChangeAttribute(self,ATR_MANA,MANA_RUM);
+};
+
+
+instance ITFO_ADDON_GROG(C_ITEM)
+{
+	name = "Grog";
+	mainflag = ITEM_KAT_FOOD;
+	flags = ITEM_MULTI;
+	value = VALUE_GROG;
+	visual = "ItMi_Rum_02.3ds";
+	material = MAT_GLAS;
+	on_state[0] = usegrog;
+	scemename = "POTIONFAST";
+	description = "Grog prawdziwego marynarza";
+	text[1] = NAME_BONUS_HP;
+	count[1] = HP_GROG;
+	text[5] = NAME_VALUE;
+	count[5] = VALUE_GROG;
+};
+
+
+func void usegrog()
+{
+	Npc_ChangeAttribute(self,ATR_HITPOINTS,HP_GROG);
+};
+
+
+var int hammer_once;
+
+instance ITFO_ADDON_LOUSHAMMER(C_ITEM)
+{
+	name = "M≥ot Lou";
+	mainflag = ITEM_KAT_FOOD;
+	flags = ITEM_MULTI;
+	value = VALUE_LOUSHAMMER;
+	visual = "ItMi_Rum_01.3ds";
+	material = MAT_GLAS;
+	on_state[0] = uselouhammer;
+	scemename = "POTIONFAST";
+	description = "M≥ot Lou";
+	text[1] = "Efekt           ???";
+	text[5] = NAME_VALUE;
+	count[5] = VALUE_LOUSHAMMER;
+};
+
+
+func void uselouhammer()
+{
+	if(HAMMER_ONCE == FALSE)
 	{
-		Npc_ChangeAttribute	(self,	ATR_HITPOINTS, HP_Shellflesh);
+		b_raiseattribute(self,ATR_MANA_MAX,MANA_LOUSHAMMER);
+		HAMMER_ONCE = TRUE;
 	};
-
-//-----------------------------
-INSTANCE ItFo_Addon_Rum(C_Item)
-{
-	name 			=	"Rum";
-
-	mainflag 		=	ITEM_KAT_FOOD;
-	flags 			=	ITEM_MULTI;
-
-	value 			=	Value_Rum;	
-
-	visual 			=	"ItMi_Rum_02.3ds"; 
-	material 		=	MAT_GLAS;
-	on_state[0]		=	UseRum;
-	scemeName		=	"POTIONFAST";
-
-	description		= 	"Bia≥y rum";
-	
-	TEXT[1]			= 	NAME_Bonus_Mana;				
-	COUNT[1]		= 	Mana_Rum;
-	
-	TEXT[5]			= 	NAME_Value;					
-	COUNT[5]		= 	Value_Rum;
-
 };
 
-	FUNC VOID UseRum()
+
+instance ITFO_ADDON_SCHLAFHAMMER(C_ITEM)
+{
+	name = "PodwÛjny M≥ot";
+	mainflag = ITEM_KAT_FOOD;
+	flags = ITEM_MULTI;
+	value = VALUE_SCHLAFHAMMER;
+	visual = "ItMi_Rum_01.3ds";
+	material = MAT_GLAS;
+	on_state[0] = useschlafhammer;
+	scemename = "POTIONFAST";
+	description = "PodwÛjny M≥ot";
+	text[1] = "Pokona nawet najtwardszego pijaka...";
+	text[5] = NAME_VALUE;
+	count[5] = VALUE_SCHLAFHAMMER;
+};
+
+
+func void useschlafhammer()
+{
+	if(self.attribute[ATR_HITPOINTS] > 2)
 	{
-		Npc_ChangeAttribute	(self,	ATR_MANA, Mana_Rum);
+		self.attribute[ATR_HITPOINTS] = self.attribute[ATR_HITPOINTS] / 2;
 	};
-
-//#############################################
-//			Grog
-//#############################################
-	
-INSTANCE ItFo_Addon_Grog(C_Item)
-{
-	name 			=	"Grog";
-
-	mainflag 		=	ITEM_KAT_FOOD;
-	flags 			=	ITEM_MULTI;
-
-	value 			=	Value_Grog;	
-
-	visual 			=	"ItMi_Rum_02.3ds"; 
-	material 		=	MAT_GLAS;
-	on_state[0]		=	UseGrog;
-	scemeName		=	"POTIONFAST";
-
-	description		= 	"Grog prawdziwego marynarza";
-	
-	TEXT[1]			= 	NAME_Bonus_HP;				
-	COUNT[1]		= 	HP_Grog;
-	
-	TEXT[5]			= 	NAME_Value;					
-	COUNT[5]		= 	Value_Grog;
-
 };
 
-	FUNC VOID UseGrog()
-	{
-		Npc_ChangeAttribute	(self,	ATR_HITPOINTS, HP_Grog);
-	};	
-//-----------------------------
-//	Lou's Hammer (mit Manaessenz)
-//-----------------------------
 
-var int Hammer_Once;	//damit der Magier sich nicht f¸r 30 Gold superviel MANA kauft!!
-
-INSTANCE ItFo_Addon_LousHammer (C_Item)
+instance ITFO_ADDON_SCHNELLERHERING(C_ITEM)
 {
-	name 			=	"M≥ot Lou";
-
-	mainflag 		=	ITEM_KAT_FOOD;
-	flags 			=	ITEM_MULTI;
-
-	value 			=	Value_LousHammer;	
-
-	visual 			=	"ItMi_Rum_01.3ds";
-	material 		=	MAT_GLAS;
-	on_state[0]		=	UseLouHammer;
-	scemeName		=	"POTIONFAST";
-
-	description		= 	"M≥ot Lou";
-	
-	TEXT[1]			= 	"Efekt           ???";				
-	
-	
-	
-	TEXT[5]			= 	NAME_Value;					
-	COUNT[5]		= 	Value_LousHammer;
-
+	name = "Szybki úledü";
+	mainflag = ITEM_KAT_FOOD;
+	flags = ITEM_MULTI;
+	value = VALUE_SCHNELLERHERING;
+	visual = "ItMi_Rum_01.3ds";
+	material = MAT_GLAS;
+	on_state[0] = useschnellerhering;
+	scemename = "POTIONFAST";
+	description = "Szybki úledü";
+	text[1] = "Wyglπda groünie!";
+	text[2] = "Efekty nieznane. Bardzo moøliwe efekty uboczne!";
+	text[5] = NAME_VALUE;
+	count[5] = VALUE_SCHNELLERHERING;
 };
 
-	FUNC VOID UseLouHammer()
+
+func void useschnellerhering()
+{
+	var C_NPC her;
+	her = Hlp_GetNpc(pc_hero);
+	if(Hlp_GetInstanceID(self) == Hlp_GetInstanceID(her))
 	{
-		if Hammer_Once == FALSE
-		{
-			B_RaiseAttribute (self,	ATR_MANA_MAX, Mana_LousHammer);
-			Hammer_Once = TRUE;
-		};	
+		Mdl_ApplyOverlayMdsTimed(self,"HUMANS_SPRINT.MDS",120000);
 	};
-//-------------------------------------------------------
-//	Lou's doppelter Hammer (Schlafhammer)
-//--------------------------------------------------------
-INSTANCE ItFo_Addon_SchlafHammer (C_Item)
+	PLAYER_KNOWSSCHNELLERHERING = TRUE;
+};
+
+
+instance ITFO_ADDON_PFEFFER_01(C_ITEM)
 {
-	name 			=	"PodwÛjny M≥ot";
-
-	mainflag 		=	ITEM_KAT_FOOD;
-	flags 			=	ITEM_MULTI;
-
-	value 			=	Value_SchlafHammer;	
-
-	visual 			=	"ItMi_Rum_01.3ds";
-	material 		=	MAT_GLAS;
-	on_state[0]		=	UseSchlafHammer;
-	scemeName		=	"POTIONFAST";
-
-	description		= 	"PodwÛjny M≥ot";
-	
-	TEXT[1]			= 	"Pokona nawet najtwardszego pijaka...";				
-
-	TEXT[5]			= 	NAME_Value;					
-	COUNT[5]		= 	Value_SchlafHammer;
-
+	name = "Torebka pieprzu";
+	mainflag = ITEM_KAT_NONE;
+	flags = ITEM_MULTI;
+	value = 100;
+	visual = "ItMi_Pocket.3ds";
+	material = MAT_LEATHER;
+	description = "Ziarna czerwonego pieprzu";
+	text[0] = "z Wysp Po≥udniowych.";
+	text[1] = "";
+	text[2] = "";
+	text[3] = "UWAGA OSTRE!";
+	text[4] = "";
+	text[5] = NAME_VALUE;
+	count[5] = value;
 };
 
-	FUNC VOID UseSchlafHammer()
-	{
-		if (self.attribute[ATR_HITPOINTS] > 2)
-		{
-			self.attribute[ATR_HITPOINTS] = (self.attribute[ATR_HITPOINTS]/2);
-		};
-	};
-	
-	
-//#############################################
-//			Schneller Hering
-//#############################################
-	
-INSTANCE ItFo_Addon_SchnellerHering(C_Item)
+instance ITFO_ADDON_FIRESTEW(C_ITEM)
 {
-	name 			=	"Szybki úledü";
-
-	mainflag 		=	ITEM_KAT_FOOD;
-	flags 			=	ITEM_MULTI;
-
-	value 			=	Value_Schnellerhering;	
-
-	visual 			=	"ItMi_Rum_01.3ds"; 
-	material 		=	MAT_GLAS;
-	on_state[0]		=	UseSchnellerHering;
-	scemeName		=	"POTIONFAST";
-
-	description		= 	"Szybki úledü";
-	
-	TEXT[1]			= 	"Wyglπda groünie!";				
-	TEXT[2]			=	"Efekty nieznane. Bardzo moøliwe efekty uboczne!";
-	
-	TEXT[5]			= 	NAME_Value;					
-	COUNT[5]		= 	Value_SchnellerHering;
-
+	name = "Ognisty gulasz";
+	mainflag = ITEM_KAT_FOOD;
+	flags = ITEM_MULTI;
+	value = VALUE_FIRESTEW;
+	visual = "ItFo_Stew.3ds";
+	material = MAT_WOOD;
+	scemename = "RICE";
+	on_state[0] = use_firestew;
+	description = name;
+	text[1] = NAME_BONUS_STR;
+	count[1] = STR_FIRESTEW;
+	text[5] = NAME_VALUE;
+	count[5] = VALUE_FIRESTEW;
 };
 
-	FUNC VOID UseSchnellerHering()
-	{
-		var C_NPC her; 	her = Hlp_GetNpc(PC_Hero); 
-	
-		if  (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(her))
-		{
-			//AI_PlayAni (self, "T_MAGRUN_2_HEASHOOT");
-			//AI_Wait (self ,2);
-			//AI_PlayAni (self, "T_HEASHOOT_2_STAND");
-			//Wld_PlayEffect("spellFX_LIGHTSTAR_WHITE",  self, self, 0, 0, 0, FALSE );
-			Mdl_ApplyOverlayMDSTimed	(self, "HUMANS_SPRINT.MDS", 120000);		//2min
-		};	
-		Player_KnowsSchnellerHering = TRUE;
-	};	
-//-------------------------------------------------------
-//------------- Pfeffer  -----------------------
-//-------------------------------------------------------
-INSTANCE ItFo_Addon_Pfeffer_01	(C_Item)
+
+func void use_firestew()
 {
-	name 				=	"Torebka pieprzu";
-
-	mainflag 			=	ITEM_KAT_NONE;
-	flags 				=	ITEM_MULTI;
-
-	value 				=	100;
-
-	visual 				=	"ItMi_Pocket.3ds";
-
-	material 			=	MAT_LEATHER;
-		
-	description			= 	"Ziarna czerwonego pieprzu";
-	
-	TEXT[0]				= 	"z Wysp Po≥udniowych.";
-	TEXT[1]				= 	"";
-	TEXT[2]				= 	"";
-	TEXT[3]				= 	"UWAGA ñ OSTRE!";
-	TEXT[4]				= 	"";
-	TEXT[5]				= 	NAME_Value;	COUNT[5]	= value;
-};
-//-------------------------------------------------------
-// Feuergeschnetzeltes mit hammer schnaps
-//-------------------------------------------------------
-INSTANCE ItFo_Addon_FireStew (C_Item)
-{	
-	name 				=	"Ognisty gulasz";
-
-	mainflag 			=	ITEM_KAT_FOOD;
-	flags 				=	ITEM_MULTI;
-	
-	value 				=	Value_FireStew;
-	
-	visual 				=	"ItFo_Stew.3ds";
-	material 			=	MAT_WOOD;
-	scemeName			=	"RICE";
-	on_state[0]			=	Use_FireStew;
-
-	description			= 	name;
-	TEXT[1]				= 	NAME_Bonus_Str;		COUNT[1]	= STR_FireStew;
-	TEXT[5]				= 	NAME_Value;			COUNT[5]	= Value_FireStew;
-
+	b_raiseattribute(self,ATR_STRENGTH,STR_FIRESTEW);
+	Npc_ChangeAttribute(self,ATR_HITPOINTS_MAX,HP_FIRESTEW);
+	PrintScreen("Si≥a i øywotnoúÊ zwiÍszone!",-1,34,FONT_SCREENSMALL,2);
 };
 
-	FUNC VOID Use_FireStew()
-	{
-		B_RaiseAttribute 	(self,	ATR_STRENGTH,	STR_FireStew);
-		Npc_ChangeAttribute	(self,	ATR_HITPOINTS_MAX,	HP_FireStew);
-		
-		PrintScreen ("St‰rke und Lebensenergie gesteigert!", -1, 34, FONT_ScreenSmall,2); 
-	};
-//-------------------------------------------------------
-// Fleischsuppe
-//-------------------------------------------------------
-INSTANCE ItFo_Addon_Meatsoup (C_Item)
-{	
-	name 				=	"Gulasz";
 
-	mainflag 			=	ITEM_KAT_FOOD;
-	flags 				=	ITEM_MULTI;
-	
-	value 				=	Value_FishSoup;
-	
-	visual 				=	"ItFo_FishSoup.3ds";
-	material 			=	MAT_WOOD;
-	scemeName			=	"RICE";
-	on_state[0]			=	Use_MeatSoup;
-
-	description			= 	"Dampfende Fleischsuppe";
-	TEXT[1]				= 	NAME_Bonus_STR;		COUNT[1]	= STR_MeatSoup;
-	TEXT[5]				= 	NAME_Value;			COUNT[5]	= Value_FishSoup;
-
+instance ITFO_ADDON_MEATSOUP(C_ITEM)
+{
+	name = "Gulasz";
+	mainflag = ITEM_KAT_FOOD;
+	flags = ITEM_MULTI;
+	value = VALUE_FISHSOUP;
+	visual = "ItFo_FishSoup.3ds";
+	material = MAT_WOOD;
+	scemename = "RICE";
+	on_state[0] = use_meatsoup;
+	description = "Parujπcy gulasz";
+	text[1] = NAME_BONUS_STR;
+	count[1] = STR_MEATSOUP;
+	text[5] = NAME_VALUE;
+	count[5] = VALUE_FISHSOUP;
 };
 
-	FUNC VOID Use_MeatSoup()
-	{
-		var string ConcatText;
-		ConcatText = ConcatStrings (NAME_Bonus_Str, IntToString (STR_MeatSoup));
-		
-		B_RaiseAttribute (self,	ATR_STRENGTH, STR_MeatSoup);
-		PrintScreen (ConcatText, -1, 34, FONT_ScreenSmall,2); 
-	};
-	
-	
-	
-	
+
+func void use_meatsoup()
+{
+	var string concattext;
+	concattext = ConcatStrings(NAME_BONUS_STR,IntToString(STR_MEATSOUP));
+	b_raiseattribute(self,ATR_STRENGTH,STR_MEATSOUP);
+	PrintScreen(concattext,-1,34,FONT_SCREENSMALL,2);
+};
+

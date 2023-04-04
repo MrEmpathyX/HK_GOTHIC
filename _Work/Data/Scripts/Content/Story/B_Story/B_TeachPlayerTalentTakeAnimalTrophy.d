@@ -57,19 +57,19 @@ func int B_TeachPlayerTalentTakeAnimalTrophy (var C_NPC slf, var C_NPC oth, var 
 	B_LogEntry (TOPIC_TalentAnimalTrophy,"...usuwaæ smoczym zêbaczom rogi.");};
 	if (trophy == TROPHY_DragonScale) 		{	
 												PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_DragonScale] 		= TRUE;	
-												CreateInvItems (Swampdragon, ItAt_DragonScale, 12);	
-												CreateInvItems (Rockdragon, ItAt_DragonScale, 12);	
-												CreateInvItems (Firedragon, ItAt_DragonScale, 12);	
-												CreateInvItems (Icedragon, 	ItAt_DragonScale, 12);
+												/*CreateInvItems(SwampDragon,ItAt_DragonScale,12);
+												CreateInvItems(RockDragon,ItAt_DragonScale,12);
+												CreateInvItems(FireDragon,ItAt_DragonScale,12);
+												CreateInvItems(IceDragon,ItAt_DragonScale,12);*/
 												
 												B_LogEntry (TOPIC_TalentAnimalTrophy,"...zbieraæ smocze ³uski ze skór zabitych smoków.");	
 											};
 	if (trophy == TROPHY_DragonBlood)		{	
 												PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_DragonBlood] 		= TRUE;	
-												CreateInvItems (Swampdragon, ItAt_DragonBlood, 2);	
+												/*CreateInvItems(SwampDragon,ItAt_DragonBlood,2);
 												CreateInvItems (Rockdragon, ItAt_DragonBlood, 2);	
 												CreateInvItems (Firedragon, ItAt_DragonBlood, 2);	
-												CreateInvItems (Icedragon, ItAt_DragonBlood, 2);	
+												CreateInvItems(IceDragon,ItAt_DragonBlood,2);*/	
 											
 												B_LogEntry (TOPIC_TalentAnimalTrophy,"...magazynowaæ krew zabitych smoków.");
 											};
@@ -80,24 +80,3 @@ func int B_TeachPlayerTalentTakeAnimalTrophy (var C_NPC slf, var C_NPC oth, var 
 	Npc_SetTalentSkill 	(oth, NPC_TALENT_TAKEANIMALTROPHY, 1);
 	return TRUE;
 };
-	
-
-
-	
-	
-	
-	
-
-	
-	
-
-	
-	
-	
-	
-	
-
-	
-	
-	
-

@@ -74,18 +74,3 @@ INSTANCE IceGolem	(Mst_Default_IceGolem)
 	B_SetVisuals_IceGolem();
 	Npc_SetToFistMode(self);
 };
-
-//*******************
-//	Ice Golem  Sylvio 
-//*******************
-INSTANCE IceGolem_Sylvio1	(Mst_Default_IceGolem)
-{
-	B_SetVisuals_IceGolem();
-	Npc_SetToFistMode(self);
-};
-
-INSTANCE IceGolem_Sylvio2	(Mst_Default_IceGolem)
-{
-	B_SetVisuals_IceGolem();
-	Npc_SetToFistMode(self);
-};

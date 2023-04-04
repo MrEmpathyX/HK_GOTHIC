@@ -31,7 +31,7 @@ func int B_TeachPlayerTalentWispDetector (var C_NPC slf, var C_NPC oth, var int 
 				
 	// ------ Lernpunkte abziehen ------			
 	oth.lp = oth.lp - kosten;
-	
+	/*
 	Log_CreateTopic (TOPIC_WispDetector,LOG_NOTE);
 	B_LogEntry (TOPIC_WispDetector,LogText_Addon_WispLearned); 
 	
@@ -43,7 +43,7 @@ func int B_TeachPlayerTalentWispDetector (var C_NPC slf, var C_NPC oth, var int 
 	if (WispSkill == WISPSKILL_MAGIC) 				{	PLAYER_TALENT_WISPDETECTOR[WISPSKILL_MAGIC] 		= TRUE;	B_WISPDETECTOR_LearnEffect(slf); B_LogEntry (TOPIC_WispDetector,LogText_Addon_WispLearned_MAGIC);};
 	if (WispSkill == WISPSKILL_FOOD) 				{	PLAYER_TALENT_WISPDETECTOR[WISPSKILL_FOOD] 			= TRUE;	B_WISPDETECTOR_LearnEffect(slf); B_LogEntry (TOPIC_WispDetector,LogText_Addon_WispLearned_FOOD);};
 	if (WispSkill == WISPSKILL_POTIONS) 			{	PLAYER_TALENT_WISPDETECTOR[WISPSKILL_POTIONS] 		= TRUE;	B_WISPDETECTOR_LearnEffect(slf); B_LogEntry (TOPIC_WispDetector,LogText_Addon_WispLearned_POTIONS);};
-                                                                                                                                                                                                        
+        */                                                                                                                                                                                                
 	PrintScreen			(PRINT_LearnWispDetector, -1, -1, FONT_Screen, 2);                                                                                                                                
 	
 	// ------ bei jedem Körperteil: WispDetector-Talent lernen (programmvariable, wird nur zur Ausgabe in StatusScreen benutzt) ------

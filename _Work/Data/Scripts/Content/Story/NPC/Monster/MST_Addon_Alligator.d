@@ -73,15 +73,3 @@ INSTANCE Alligator	(Mst_Default_Addon_Alligator)
 	B_SetVisuals_Alligator();
 	Npc_SetToFistMode(self);
 };
-
-//**************
-//	Dead Alligator (PortalTempel)
-//**************
-
-INSTANCE Alligator_PortalDead	(Mst_Default_Addon_Alligator)
-{
-	B_SetVisuals_Alligator();
-	Npc_SetToFistMode(self);
-};
-
-

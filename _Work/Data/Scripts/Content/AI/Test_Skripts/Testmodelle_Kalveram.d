@@ -451,21 +451,15 @@ instance Itemhoshi (Npc_Default)
 	CreateInvItems(self,ItWr_CrsBowStonePlate1_Addon,1);
 	CreateInvItems(self,ItWr_CrsBowStonePlate2_Addon,1);
 	CreateInvItems(self,ItWr_CrsBowStonePlate3_Addon,1);
-	CreateInvItems(self,ITWr_Addon_Hinweis_02,1);
 	CreateInvItems(self,ITWr_Addon_Health_04,1);
 	CreateInvItems(self,ITWr_Addon_Mana_04,1);
-	CreateInvItems(self,ITWr_Addon_Hinweis_01,1);
-	CreateInvItems(self,ITWr_Addon_William_01,1);
 	CreateInvItems(self,ITWr_Addon_MCELIXIER_01,1);
-	CreateInvItems(self,ITWr_Addon_Pirates_01,1);
 	CreateInvItems(self,ITWr_Addon_Joint_01,1);
 	CreateInvItems(self,ITWr_Addon_Lou_Rezept,1);
 	CreateInvItems(self,ITWr_Addon_Lou_Rezept2,1);
 	CreateInvItems(self,ITWr_Addon_Piratentod,1);
 	CreateInvItems(self,Fakescroll_Addon,1);
 	CreateInvItems(self,ItWr_Addon_AxtAnleitung,1);
-	CreateInvItems(self,ItWr_Addon_SUMMONANCIENTGHOST,1);
-	CreateInvItems(self,ItWr_Map_AddonWorld,1);
 	
 	CreateInvItems(self,ITWR_Addon_Runemaking_KDW_CIRC1,1);
 	CreateInvItems(self,ITWR_Addon_Runemaking_KDW_CIRC2,1);
@@ -887,124 +881,14 @@ instance Itemhoshi (Npc_Default)
 	CreateInvItems(self,ItWr_KDWLetter,1);
 	CreateInvItems(self,ItWr_GilbertLetter,1);
 	CreateInvItems(self,ItRi_Tengron,1);
-	CreateInvItems(self,ItMi_InnosEye_MIS,1);
-	CreateInvItems(self,ItMi_InnosEye_Discharged_Mis,1);
-	CreateInvItems(self,ItMi_InnosEye_Broken_Mis,1);
-	CreateInvItems(self,ItWr_PermissionToWearInnosEye_MIS,1);
-	CreateInvItems(self,ItWr_XardasBookForPyrokar_Mis,1);
-	CreateInvItems(self,ItKe_CHEST_SEKOB_XARDASBOOK_MIS,1);
-	CreateInvItems(self,ItWr_CorneliusTagebuch_Mis,1);
-	CreateInvItems(self,ITWR_DementorObsessionBook_MIS,1);
-	CreateInvItems(self,ItWr_PyrokarsObsessionList,1);
-	CreateInvItems(self,ItPo_HealHilda_MIS,1);
-	CreateInvItems(self,ItMw_MalethsGehstock_MIS,1);
-	CreateInvItems(self,ItMi_MalethsBanditGold,1);
 	CreateInvItems(self,ItMi_Moleratlubric_MIS,1);
-	CreateInvItems(self,ItWr_BabosLetter_MIS,1);
-	CreateInvItems(self,ItWr_BabosPinUp_MIS,1);
-	CreateInvItems(self,ItWr_BabosDocs_MIS,1);
-	CreateInvItems(self,ItKe_IgarazChest_Mis,1);
-	CreateInvItems(self,ItWr_Astronomy_Mis,1);
-	CreateInvItems(self,ItPo_HealObsession_MIS,1);
-	CreateInvItems(self,ItSe_Golemchest_Mis,1);
-	CreateInvItems(self,ItWr_ShatteredGolem_MIS,1);
-	CreateInvItems(self,ItWr_DiegosLetter_MIS,1);
-	CreateInvItems(self,ItSe_DiegosTreasure_Mis,1);
-	CreateInvItems(self,ItMi_UltharsHolyWater_Mis,1);
-	CreateInvItems(self,ItWr_MinenAnteil_Mis,1);
-	CreateInvItems(self,ItAm_Prot_BlackEye_Mis,1);
 	CreateInvItems(self,ItMi_KarrasBlessedStone_Mis,1);
-	CreateInvItems(self,ItWr_RichterKomproBrief_MIS,1);
-	CreateInvItems(self,ItWr_MorgahardTip,1);
-	CreateInvItems(self,ItWr_Map_Shrine_MIS,1);
-	CreateInvItems(self,ItWr_VinosKellergeister_Mis,1);
-	CreateInvItems(self,ItAm_Mana_Angar_MIS,1);
-	CreateInvItems(self,ItMW_1H_FerrosSword_Mis,1);
-	CreateInvItems(self,ItMi_KerolothsGeldbeutel_MIS,1);
-	CreateInvItems(self,ItMi_KerolothsGeldbeutelLeer_MIS,1);
-	CreateInvItems(self,ItRw_SengrathsArmbrust_MIS,1);
-	CreateInvItems(self,ItAt_TalbinsLurkerSkin,1);
-	CreateInvItems(self,ItAt_DragonEgg_MIS,1);
-	CreateInvItems(self,ItRi_OrcEliteRing,1);
-	CreateInvItems(self,ItPo_DragonEggDrinkNeoras_MIS,1);
-	CreateInvItems(self,ItWr_Map_Orcelite_MIS,1);
-	CreateInvItems(self,ItWr_Map_Caves_MIS,1);
-	CreateInvItems(self,ItWr_XardasLetterToOpenBook_MIS,1);
-	CreateInvItems(self,ItKe_MonastarySecretLibrary_Mis,1);
-	CreateInvItems(self,ItWr_HallsofIrdorath_Mis,1);
-	CreateInvItems(self,ItWr_HallsofIrdorath_Open_Mis,1);
-	CreateInvItems(self,ItWr_XardasSeamapBook_Mis,1);
-	CreateInvItems(self,ItWr_UseLampIdiot_Mis,1);
-	CreateInvItems(self,ItWr_Seamap_Irdorath,1);
-	CreateInvItems(self,ItMi_KerolothsGeldbeutel_MIS,1);
-	CreateInvItems(self,ITWr_ForgedShipLetter_MIS,1);
-	CreateInvItems(self,ITKE_OC_MAINGATE_MIS,1);
-	CreateInvItems(self,ITKE_SHIP_LEVELCHANGE_MIS,1);
-	CreateInvItems(self,ItPo_PotionOfDeath_01_Mis,1);
-	CreateInvItems(self,ItPo_PotionOfDeath_02_Mis,1);
-	CreateInvItems(self,ItAm_AmulettOfDeath_Mis,1);
-	CreateInvItems(self,ItPo_HealRandolph_MIS,1);
-	CreateInvItems(self,ItSe_XardasNotfallBeutel_MIS,1);
-	CreateInvItems(self,ItWr_XardasErmahnungFuerIdioten_MIS,1);
-	CreateInvItems(self,ItWr_Krypta_Garon,1);
-	CreateInvItems(self,ItKe_OrkKnastDI_MIS,1);
-	CreateInvItems(self,ItKe_EVT_UNDEAD_01,1);
-	CreateInvItems(self,ItKe_EVT_UNDEAD_02,1);
-	CreateInvItems(self,ItKe_LastDoorToUndeadDrgDI_MIS,1);
-	CreateInvItems(self,ItWr_LastDoorToUndeadDrgDI_MIS,1);
-	CreateInvItems(self,ItKe_ChestMasterDementor_MIS,1);
-	CreateInvItems(self,ItWr_Rezept_MegaDrink_MIS,1);
-	CreateInvItems(self,ItWr_Diary_BlackNovice_MIS,1);
-	CreateInvItems(self,ItWr_ZugBruecke_MIS,1);
-	CreateInvItems(self,ItMi_PowerEye,1);
 //Addon
-	CreateInvItems(self,ItWr_SaturasFirstMessage_Addon_Sealed,1);
-	CreateInvItems(self,ItWr_SaturasFirstMessage_Addon,1);
-	CreateInvItems(self,ItMi_Ornament_Addon,1);
-	CreateInvItems(self,ItMi_Ornament_Addon_Vatras,1);
-	CreateInvItems(self,ItWr_Map_NewWorld_Ornaments_Addon,1);
-	CreateInvItems(self,ItWr_Map_NewWorld_Dexter,1);
-	CreateInvItems(self,ItRi_Ranger_Lares_Addon,1);
-	CreateInvItems(self,ItRi_Ranger_Addon,1);
-	CreateInvItems(self,ItRi_LanceRing,1);
-	CreateInvItems(self,ItMi_PortalRing_Addon,1);
-	CreateInvItems(self,ItWr_Martin_MilizEmpfehlung_Addon,1);
-	CreateInvItems(self,ItWr_RavensKidnapperMission_Addon,1);
-	CreateInvItems(self,ItWr_Vatras_KDFEmpfehlung_Addon,1);
-	CreateInvItems(self,ItMi_LostInnosStatue_Daron,1);
-	CreateInvItems(self,ItWr_LuciasLoveLetter_Addon,1);
 	CreateInvItems(self,ItMi_AmbossEffekt_Addon,1);
 	CreateInvItems(self,ItMi_OrnamentEffekt_FARM_Addon,1);
 	CreateInvItems(self,ItMi_OrnamentEffekt_FOREST_Addon,1);
 	CreateInvItems(self,ItMi_OrnamentEffekt_BIGFARM_Addon,1);
-	CreateInvItems(self,ItMi_Rake,1);
-	CreateInvItems(self,ItRi_Addon_BanditTrader,1);
-	CreateInvItems(self,ItWr_Addon_BanditTrader,1);
-	CreateInvItems(self,ItWr_Vatras2Saturas_FindRaven,1);
-	CreateInvItems(self,ItWr_Vatras2Saturas_FindRaven_opened,1);
-	CreateInvItems(self,ItAm_Addon_WispDetector,1);
-	CreateInvItems(self,ItFo_Addon_Krokofleisch_Mission,1);
-	CreateInvItems(self,ItRi_Addon_MorgansRing_Mission,1);
-	CreateInvItems(self,ItMi_Focus,1);
-	CreateInvItems(self,ItMi_Addon_Steel_Paket,1);
-	CreateInvItems(self,ItWr_StonePlateCommon_Addon,1);
-	CreateInvItems(self,ItMi_Addon_Stone_01,1);
-	CreateInvItems(self,ItMi_Addon_Stone_05,1);
-	CreateInvItems(self,ItMi_Addon_Stone_03,1);
-	CreateInvItems(self,ItMi_Addon_Stone_04,1);
-	CreateInvItems(self,ItMi_Addon_Stone_02,1);
-	CreateInvItems(self,ItMI_Addon_Kompass_Mis,1);	
-	CreateInvItems(self,ItSE_Addon_FrancisChest,1);
-	CreateInvItems(self,ITWR_Addon_FrancisAbrechnung_Mis,1);
-	CreateInvItems(self,ITWR_Addon_GregsLogbuch_Mis,1);
-	CreateInvItems(self,ITKE_Addon_Bloodwyn_01,1);
-	CreateInvItems(self,ITKE_Addon_Heiler,1);
-	CreateInvItems(self,ItMi_TempelTorKey,1);
-	CreateInvItems(self,ItMi_Addon_Bloodwyn_Kopf,1);
-	CreateInvItems(self,ItWR_Addon_TreasureMap,1);
-	CreateInvItems(self,ItMi_Addon_GregsTreasureBottle_MIS,1);
-	CreateInvItems(self,itmi_erolskelch,1);
-	
+	CreateInvItems(self,ItMi_Rake,1);	
 		
 	// ------ visuals ------																			//Muss NACH Attributen kommen, weil in B_SetNpcVisual die Breite abh. v. STR skaliert wird
 	B_SetNpcVisual 		(self, MALE, "Hum_Head_FatBald", Face_N_OldBald_Jeremiah, BodyTex_N, 0);	
@@ -1022,43 +906,6 @@ instance Itemhoshi (Npc_Default)
 	
 };
 
-instance Hoshi_Testmodell (Npc_Default)
-{
-	// ------ NSC ------
-	name 		= "Hoshi";	
-	guild 		= GIL_MIL;
-	id 			= 20000;
-	voice 		= 6;
-	flags       = 0;																
-	
-	// ------ Attribute ------
-	B_SetAttributesToChapter (self, 3);																	
-	
-	// ------ Kampf-Taktik ------
-	fight_tactic		= FAI_HUMAN_STRONG;	
-	
-	// ------ Equippte Waffen ------																	
-	EquipItem			(self, ItMw_1h_Mil_Sword);
-	
-	
-	// ------ Inventory ------
-	B_CreateAmbientInv 	(self);
-
-		
-	// ------ visuals ------																		
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_FatBald", Face_N_Normal05, BodyTex_N, ITAR_PAL_M);	
-	Mdl_SetModelFatness	(self, 2);
-	Mdl_ApplyOverlayMds	(self, "Humans_Militia.mds"); 
-	
-	// ------ NSC-relevante Talente vergeben ------
-	B_GiveNpcTalents (self);
-	
-	// ------ Kampf-Talente ------																		
-	B_SetFightSkills (self, 80); 
-	
-	// ------ TA anmelden ------
-	daily_routine 		= Rtn_Start_302;
-};
 
 FUNC VOID Rtn_Start_20000 ()
 {	
@@ -1370,15 +1217,9 @@ FUNC VOID Startup_TA_Testlevel ()
 	B_InitGuildAttitudes();
 	B_InitNpcGlobals ();
 
-	Wld_InsertNpc (PIR_1350_Addon_Francis,"WP_SMITH_SHARP");
-	Wld_InsertNpc (PIR_1351_Addon_Samuel,"WP_COOK_STOVE");
-	Wld_InsertNpc (PIR_1352_Addon_AlligatorJack,"WP_SAW");
-	Wld_InsertNpc (PIR_1353_Addon_Morgan,"WP_SMITH_FIRE");
-	Wld_InsertNpc (PIR_1354_Addon_Henry,"WP_POTION_ALCHEMY");
-	Wld_InsertNpc (PIR_1355_Addon_Skip,"WP_COOK_PAN");
-	Wld_InsertNpc (PIR_1356_Addon_Bill,"WP_ROAST_SCAVENGER");
 	
-	Wld_InsertNpc (PAL_Zombie01,"WP_GUIDE_PLAYER");
+	
+	//Wld_InsertNpc (PAL_Zombie01,"WP_GUIDE_PLAYER");
 	//Wld_InsertNpc (PAL_Zombie01,"WP_GUIDE_PLAYER");
 	
 	//Wld_InsertNpc (PIR_1357_Addon_Pirat,"WP_SIT_CHAIR");  		//Ersatz-Pirat

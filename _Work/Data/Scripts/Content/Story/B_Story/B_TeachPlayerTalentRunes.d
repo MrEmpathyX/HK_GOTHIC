@@ -31,6 +31,7 @@ func int B_TeachPlayerTalentRunes (var C_NPC slf, var C_NPC oth, var int spell)
 	
 	var C_NPC ScrollTrader;
 	
+	/*
 	if	(Npc_IsDead(Gorax)== FALSE)
 	{
 		ScrollTrader = Hlp_GetNpc(Gorax);
@@ -51,6 +52,7 @@ func int B_TeachPlayerTalentRunes (var C_NPC slf, var C_NPC oth, var int spell)
 	{
 		ScrollTrader = Hlp_GetNpc(Cronos_ADW);
 	};
+	*/
 	
 	// ------ Rune lernen ------
 	if (spell == SPL_PalLight)				{	PLAYER_TALENT_RUNES[SPL_PalLight] 				= TRUE;	};		

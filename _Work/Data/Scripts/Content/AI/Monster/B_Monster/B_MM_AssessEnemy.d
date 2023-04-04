@@ -12,13 +12,6 @@
 func void B_MM_AssessEnemy ()
 {
 	// EXIT IF...
-
-	// ------- Drache greift nicht an, wenn SC LaberAmulett hat ------
-	if (self.guild == GIL_DRAGON)
-	&& (Npc_HasItems (hero, ItMi_InnosEye_Mis) >= 1)
-	{
-		return;
-	}; 
 	
 	// ------- OVERRIDE für menschliche Enemies ------
 	if ((self.aivar[AIV_NoFightParker] == TRUE)	//werden nie angegriffen und greifen auch selbst nicht an.
@@ -34,28 +27,10 @@ func void B_MM_AssessEnemy ()
 		return;
 	};
 	
-	// ------- TESTMODE: Levelinspektor wird ignoriert ------
-	var C_NPC PCL; PCL = Hlp_GetNpc(PC_Levelinspektor);
-	if (Hlp_GetInstanceID(other) == Hlp_GetInstanceID(PCL))
-	{
-		return;
-	};
-	
 	// ------- Mag-Golem-Lares-Hack ------------
-	var C_NPC MGO; MGO = Hlp_GetNpc(MagicGolem);
-	var C_NPC LAR; LAR = Hlp_GetNpc(VLK_449_Lares);
 	
-	if  (Hlp_GetInstanceID(other) == Hlp_GetInstanceID(LAR))
-	&&  (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(MGO))
-	{
-		return;
-	};
 	
 	// ------ HACK: Orks nicht in die Burg ------
-	if (Npc_GetDistToWP (self, "OC_RAMP_07") <= 500) 
-	{
-		return;
-	};
 	
 	// ------ SC/NSC im Dialog ignorieren ------
 	if (other.aivar[AIV_INVINCIBLE] == TRUE)

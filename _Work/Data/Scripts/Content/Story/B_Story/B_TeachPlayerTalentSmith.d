@@ -66,25 +66,3 @@ func int B_TeachPlayerTalentSmith (var C_NPC slf, var C_NPC oth, var int waffe)
 	return TRUE;
 };
 	
-
-	
-	
-	
-	
-	
-	
-	
-
-	
-	
-
-	
-	
-	
-	
-	
-
-	
-	
-	
-

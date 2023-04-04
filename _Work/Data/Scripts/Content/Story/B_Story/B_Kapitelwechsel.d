@@ -23,8 +23,7 @@ FUNC VOID B_Kapitelwechsel (VAR INT neues_Kapitel, VAR INT aktuelles_Level_Zen)
 	else if	(neues_Kapitel == 2)
 	{
 		// ------ Immortals aufheben -----
-		Sekob.flags = 0;
-		Bengar.flags = 0;
+
 		
 		// ------ Tagebucheintrag ------
 		
@@ -98,11 +97,11 @@ FUNC VOID B_Kapitelwechsel (VAR INT neues_Kapitel, VAR INT aktuelles_Level_Zen)
 
 	if (aktuelles_Level_Zen == OLDWORLD_ZEN)
 	{
-		B_ENTER_OLDWORLD ();
+		//B_ENTER_OLDWORLD ();
 	};
 	if (aktuelles_Level_Zen == NEWWORLD_ZEN)
 	{
-		B_ENTER_NEWWORLD ();
+		//B_ENTER_NEWWORLD ();
 	};
 	
  

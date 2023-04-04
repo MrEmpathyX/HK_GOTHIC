@@ -4,19 +4,12 @@ _INTERN\CLASSES.D
 
 
 AI\AI_INTERN\AI_CONSTANTS.D
-_INTERN\IKARUS_CONST_G2.D
-_INTERN\ENGINECLASSES_G2\*.D
-_INTERN\IKARUS.D
-_INTERN\float.D
-LeGo\Header_G2.src
 AI\AI_INTERN\BODYSTATES.D
 AI\AI_INTERN\FOCUS.D
 AI\AI_INTERN\Npc_SetToMad.d
 AI\AI_INTERN\Species.d
 AI\AI_INTERN\PrintDebug.d
 AI\AI_INTERN\PrintPlus.d
-
-STORY\Events\B_AWAKE_STONEGUARDIAN.d
 
 STORY\Log_Entries\Log_Constants_*.d
 STORY\XP_Constants.d
@@ -39,14 +32,11 @@ STORY\B_Story\B_LogEntry.d
 STORY\B_Story\B_GetDayPlus.d
 STORY\B_Story\B_BlessAttribute.d
 STORY\B_Story\B_StartOtherRoutine.d
-STORY\B_Content\B_RangerMeeting.d
-STORY\B_Content\B_SCObsession.d
+
 STORY\B_Content\B_Extro_Avi.d
 STORY\B_Content\B_LieselMaeh.d
 STORY\B_Content\B_IrrlichtBeep.d
-STORY\B_Content\B_Greg_ComesToDexter.d
 STORY\B_Content\B_Upgrade_Hero_HackChance.d
-STORY\B_CONTENT\B_CountCanyonRazor.d
 STORY\B_CONTENT\B_MALCOMEXIDENT.d
 
 
@@ -57,7 +47,6 @@ STORY\Dialog_Mobsis\B_PlayerMap.d
 AI\HUMAN\B_Human\B_Say.d
 AI\HUMAN\B_Human\B_Say_Overlay.d
 STORY\Log_Entries\B_CloseTopic.d
-STORY\Log_Entries\B_CloseTopics_*.d
 STORY\Log_Entries\B_Checklog.d
 
 STORY\B_Story\B_GivePlayerXP.d
@@ -66,7 +55,6 @@ STORY\B_Content\B_SCUsesRake.d
 
 STORY\B_Story\B_KillNpc.d
 STORY\B_Story\B_RemoveNpc.d
-STORY\B_Content\B_RemoveQuarhodron.d
 STORY\B_Content\B_PlayerFindItem.d
 
 
@@ -113,12 +101,6 @@ AI\HUMAN\B_Human\B_LookAtNpc.d
 AI\HUMAN\B_Human\B_ResetAll.d 
 
 STORY\B_Story\B_UseItem.d
-
-STORY\B_AssignAmbientInfos\B_LastWarningVatras.d
-STORY\B_AssignAmbientInfos\B_Addon_Myxir_TeachRequest.d
-STORY\B_AssignAmbientInfos\B_Addon_Riordian_TeachWisp.d
-STORY\B_AssignAmbientInfos\B_Bartok_ShitAnOrc.d
-STORY\B_AssignAmbientInfos\B_Koch_Hackebeil.d
 
 AI\HUMAN\B_Human\B_ValidateOther.d
 AI\HUMAN\B_Human\B_Say_Gold.d
@@ -183,7 +165,6 @@ AI\HUMAN\B_Human\B_AssessTheft.d
 AI\HUMAN\B_Human\B_AssessThreat.d
 AI\HUMAN\B_Human\B_AssessUseMob.d
 AI\HUMAN\B_Human\B_AssessWarn.d
-STORY\B_AssignAmbientInfos\B_AssignDementorTalk.d
 STORY\B_AssignAmbientInfos\B_AssignSchiffswachenTalk.d
 AI\HUMAN\B_Human\B_AssessPlayer.d
 AI\HUMAN\B_Human\B_MoveMob.d
@@ -198,7 +179,7 @@ STORY\B_AssignAmbientInfos\B_Announce_Herold.d
 STORY\B_AssignAmbientInfos\B_Preach_Vatras.d
 
 
-STORY\B_AssignAmbientInfos\B_AssignAmbientInfos_*.d
+STORY\B_AssignAmbientInfos\B_AssignAmbientInfos.d
 STORY\B_AssignAmbientInfos\B_AssignAmbientNEWS.d
 STORY\B_AssignAmbientInfos\B_AssignToughGuyNEWS.d
 STORY\B_AssignAmbientInfos\B_AssignCityGuide.d
@@ -219,12 +200,7 @@ AI\MAGIC\Spell_ProcessMana_Release.d
 
 AI\MAGIC\ZS_Magic\ZS_*.d
 
-
 STORY\B_Story\B_GiveDeathInv.d
-STORY\B_Content\B_DragonKillCounter.d
-
-Story\Events\B_EVENT_PORTAL_EARTHQUAKE.d
-Story\Events\EVT_TELEPORTSTATION_FUNC.d
 
 AI\HUMAN\TA.d
 AI\HUMAN\TA_Human\ZS*.d
@@ -288,22 +264,14 @@ STORY\B_Story\B_TeachThiefTalent.d
 STORY\B_Story\B_UseFakeScroll.d
 STORY\B_Story\B_InitGuildAttitudes.d
 STORY\B_Story\B_NPC_IsAliveCheck.d
-STORY\B_AssignAmbientInfos\B_AssignDragonTalk_Main.d
-STORY\B_AssignAmbientInfos\B_AssignDragonTalk_*.d
-STORY\B_AssignAmbientInfos\B_AssignDragonTalk.d
-STORY\B_AssignAmbientInfos\B_AssignDementorTalk_*.d
-STORY\B_AssignAmbientInfos\B_AssignORC_AntiPaladinTalk.d
-STORY\B_AssignAmbientInfos\B_NpcObsessedByDMT.d
 STORY\B_Story\B_GregIsBack.d
 
 STORY\B_Story\B_ENTER_ADDONWORLD.d
-STORY\B_Story\B_ENTER_OLDWORLD.d
-STORY\B_Story\B_ENTER_NEWWORLD.d
+
 STORY\B_Story\B_KapitelWechsel.d
-STORY\B_Content\B_CaptainConditions.d
-STORY\B_Content\B_CaptainCallsAllOnBoard.d
+
 STORY\B_Content\C_ADDON_KNOWS_SCHNAPS.d
-STORY\B_Content\B_Addon_PiratesGoHome.d
+
 
 STORY\DIALOGE\DIA*.d
 STORY\B_AssignAmbientInfos\B_*.d
@@ -325,11 +293,11 @@ AI\MONSTER\Rtn_Monster\ZS_MM_AllScheduler.d
 
 AI\MONSTER\ZS_Monster\ZS_MM_*.d
 
-STORY\B_Story\B_MAGECAVETRIGGER.d
+
 STORY\Events\*.d
 AI\Test_Skripts\*.d
 
-STORY\B_Story\B_ENTER_DRAGONISLAND.d
+
 STORY\Startup.d
 
 

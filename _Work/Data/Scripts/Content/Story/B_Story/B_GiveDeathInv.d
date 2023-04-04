@@ -132,23 +132,7 @@ func void B_GiveDeathInv (var C_NPC slf)
 	{
 		if (slf.aivar[AIV_MM_REAL_ID] == ID_DRAGONSNAPPER)		{	CreateInvItems (slf, ItAt_DrgSnapperHorn, 2); 	};
 	};
-	
-	// ------ Drachen-Schuppen ------
-	if (PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_DragonScale] == TRUE)
-	{
-		//Joly: die anderen Drachen bekommen ihren Stuff beim erlangen des Talentes TROPHY_DragonScale.
-		if (Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(FireDragonIsland)){	CreateInvItems (slf, ItAt_DragonScale, 12);		};
-		if (Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(Undeaddragon))	{	CreateInvItems (slf, ItAt_DragonScale, 12);		};
-	};
- 	
-	// ------ Drachen-Blut------
-	if (PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_DragonBlood] == TRUE)
-	{
-		//Joly: die anderen Drachen bekommen ihren Stuff beim erlangen des Talentes TROPHY_DragonBlood.
-		if (Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(FireDragonIsland))	{	CreateInvItems (slf, ItAt_DragonBlood, 2);		};
-		if (Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(Undeaddragon))		{	CreateInvItems (slf, ItAt_DragonBlood, 2);		};
-	};
- 	
+	 	 	
  	// ------ Verteilung von ANFANG AN ------
 	if (slf.aivar[AIV_MM_REAL_ID] == ID_MEATBUG)		{	CreateInvItems (slf, ItAt_MeatbugFlesh, 1);		}
 
@@ -369,11 +353,6 @@ func void B_GiveDeathInv (var C_NPC slf)
 	//-------- AIV setzen, damit INV-Items nur EINMAL vergeben werden  --------
 	slf.aivar[AIV_DeathInvGiven] = TRUE;
 };
-
-
-
-
-
 
 
 

@@ -46,8 +46,8 @@ INSTANCE ItFo_Apple (C_Item)
 	TEXT[1]				= 	NAME_Bonus_HP;		
 	COUNT[1]			= 	HP_Apple;
 	
-	TEXT[3]				=    "Ein frischer Apfel";
-	TEXT[4]				=    "knackig und saftig";
+	TEXT[3]				=    "Œwie¿e jab³ko";
+	TEXT[4]				=    "smaczne i po¿ywne.";
 	TEXT[5]				= 	NAME_Value;		
 	COUNT[5]			= 	Value_Apple;
 
@@ -323,7 +323,7 @@ INSTANCE ItFo_CoragonsBeer (C_Item)
 	TEXT[1]				= 	NAME_Bonus_HP;		COUNT[1]	= HP_Beer;
 	TEXT[2]				= 	NAME_Bonus_Mana;	COUNT[2]	= Mana_Beer;
 	
-	TEXT[4]				= 	"Coragons Spezial Bier";		
+	TEXT[4]				= 	"Specjalne piwo Coragona";		
 	TEXT[5]				= 	NAME_Value;		COUNT[5]	= Value_Beer;
 
 };

@@ -1939,3 +1939,160 @@ instance ITAR_Prisoner (C_Item)
 	TEXT[5]					=	NAME_Value;			
 	COUNT[5]				= 	value;
 };
+INSTANCE C_Pancerz_Straznika (C_Item)
+{
+	name 					=	"Ciê¿ka zbroja Stra¿nika";
+
+	mainflag 				=	ITEM_KAT_ARMOR;
+	flags 					=	0;
+
+	protection [PROT_EDGE]	=	70;
+	protection [PROT_BLUNT] = 	70;
+	protection [PROT_POINT] = 	70;
+	protection [PROT_FIRE] 	= 	0;
+	protection [PROT_MAGIC] = 	0;
+
+	value 					=	VALUE_ITAR_Thorus_Addon;
+
+	wear 					=	WEAR_TORSO;
+
+	visual 					=	"ItAr_Thorus_ADDON.3ds";
+	visual_change 			=	"Armor_Thorus_ADDON.asc";
+	visual_skin 			=	0;
+	material 				=	MAT_LEATHER;
+
+	description				=	"Tylko najlepsi stra¿nicy Gomeza mog¹ nosiæ tê zbrojê.";
+
+	TEXT[0]					= 	PRINT_Addon_BDTArmor;
+	TEXT[1]					=	NAME_Prot_Edge;			
+	COUNT[1]				= 	protection	[PROT_EDGE];
+	
+	TEXT[2]					=	NAME_Prot_Point;		
+	COUNT[2]				= 	protection	[PROT_POINT];
+	
+	TEXT[3] 				=	NAME_Prot_Fire;			
+	COUNT[3]				= 	protection	[PROT_FIRE];
+	
+	TEXT[4]					=	NAME_Prot_Magic;		
+	COUNT[4]				= 	protection	[PROT_MAGIC];
+	
+	TEXT[5]					=	NAME_Value;			
+	COUNT[5]				= 	value;
+};
+INSTANCE Pancerz_Gomeza (C_Item)
+{
+	name 					=	"Pancerz Gomeza";
+
+	mainflag 				=	ITEM_KAT_ARMOR;
+	flags 					=	0;
+
+	protection [PROT_EDGE]	=	40;
+	protection [PROT_BLUNT]	= 	40;
+	protection [PROT_POINT] = 	40;
+	protection [PROT_FIRE] 	= 	0;
+	protection [PROT_MAGIC] = 	0;
+
+	value 					=	500;
+
+	wear 					=	WEAR_TORSO;
+
+	visual 					=	"Pancerz_Gomeza.3ds";
+	visual_change 			=	"Pancerz_Gomeza.asc";
+	visual_skin 			=	0;
+	material 				=	MAT_METAL;
+
+	description				=	"Piêkna zbroja dla najgorszego fiuta w obozie.";
+	
+	TEXT[1]					=	NAME_Prot_Edge;			
+	COUNT[1]				= 	protection	[PROT_EDGE];
+	
+	TEXT[2]					=	NAME_Prot_Point;		
+	COUNT[2]				= 	protection	[PROT_POINT];
+	
+	TEXT[3] 				=	NAME_Prot_Fire;			
+	COUNT[3]				= 	protection	[PROT_FIRE];
+	
+	TEXT[4]					=	NAME_Prot_Magic;		
+	COUNT[4]				= 	protection	[PROT_MAGIC];
+	
+	TEXT[5]					=	NAME_Value;			
+	COUNT[5]				= 	value;
+};
+INSTANCE Pancerz_Magnata (C_Item)
+{
+	name 					=	"Zbroja magnata";
+
+	mainflag 				=	ITEM_KAT_ARMOR;
+	flags 					=	0;
+
+	protection [PROT_EDGE]	=	70;
+	protection [PROT_BLUNT] = 	70;
+	protection [PROT_POINT] = 	70;
+	protection [PROT_FIRE] 	= 	0;
+	protection [PROT_MAGIC] = 	0;
+
+	value 					=	2000;
+
+	wear 					=	WEAR_TORSO;
+
+	visual 					=	"ItAr_CHAOS_ADDON.3ds";
+	visual_change 			=	"Armor_CHAOS_ADDON.asc";
+	visual_skin 			=	0;
+	material 				=	MAT_METAL;
+
+	description				=	"Zbroja godna uwagi - prawdziwego wojownika";
+
+	TEXT[1]					=	NAME_Prot_Edge;			
+	COUNT[1]				= 	protection	[PROT_EDGE];
+	
+	TEXT[2]					=	NAME_Prot_Point;		
+	COUNT[2]				= 	protection	[PROT_POINT];
+	
+	TEXT[3] 				=	NAME_Prot_Fire;			
+	COUNT[3]				= 	protection	[PROT_FIRE];
+	
+	TEXT[4]					=	NAME_Prot_Magic;		
+	COUNT[4]				= 	protection	[PROT_MAGIC];
+	
+	TEXT[5]					=	NAME_Value;			
+	COUNT[5]				= 	value;
+};
+INSTANCE S_Pancerz_Straznika (C_Item) 
+{
+	name 					=	"Œrednia zbroja Stra¿ika";
+
+	mainflag 				=	ITEM_KAT_ARMOR;
+	flags 					=	0;
+
+	protection [PROT_EDGE]	=	70;
+	protection [PROT_BLUNT] = 	70;
+	protection [PROT_POINT] = 	70;
+	protection [PROT_FIRE] 	= 	0;
+	protection [PROT_MAGIC] = 	0;
+
+	value 					=	1000;
+
+	wear 					=	WEAR_TORSO;
+
+	visual 					=	"ItAr_Bloodwyn_ADDON.3ds";
+	visual_change 			=	"Armor_Bloodwyn_ADDON.asc";
+	visual_skin 			=	0;
+	material 				=	MAT_LEATHER;
+
+	description				=	"Jeœli posiadasz tê zbrojê to jesteœ blisko bycia jednym z najlepszych";
+
+	TEXT[1]					=	NAME_Prot_Edge;			
+	COUNT[1]				= 	protection	[PROT_EDGE];
+	
+	TEXT[2]					=	NAME_Prot_Point;		
+	COUNT[2]				= 	protection	[PROT_POINT];
+	
+	TEXT[3] 				=	NAME_Prot_Fire;			
+	COUNT[3]				= 	protection	[PROT_FIRE];
+	
+	TEXT[4]					=	NAME_Prot_Magic;		
+	COUNT[4]				= 	protection	[PROT_MAGIC];
+	
+	TEXT[5]					=	NAME_Value;			
+	COUNT[5]				= 	value;
+};

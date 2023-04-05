@@ -752,7 +752,7 @@ const int FaceBabe_N_Hure			= 	155 ;
 const int FaceBabe_N_Anne			= 	156 ;
 const int FaceBabe_B_RedLocks2		= 	157	;
 const int FaceBabe_L_Charlotte2		= 	158 ;
-
+const int Face_N_Baraback1          =   180 ;
 
 //-----------------ADD ON---------------------------------
 const int Face_N_Fortuno		= 	159;

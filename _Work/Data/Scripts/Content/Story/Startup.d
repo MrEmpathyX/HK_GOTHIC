@@ -14,6 +14,7 @@ func void STARTUP_GLOBAL()
 {
 	// wird fuer jede Welt aufgerufen (vor STARTUP_<LevelName>)
 	Game_InitGerman();
+	LeGo_Init (LeGo_All); & ~LeGo_Bloodsplats);
 };
 
 func void INIT_GLOBAL()

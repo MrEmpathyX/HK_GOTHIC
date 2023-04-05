@@ -1,7 +1,7 @@
 instance PC_Hero (NPC_DEFAULT)
 {
 	// ------ SC ------
-	name 		= "Ja";
+	name 		= "Milten";
 	guild		= GIL_NONE;
 	id			= 0;
 	voice		= 15;
